@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  /* Branding Colors */
+  --color-primary: #2F80ED;
+  --color-secondary: #4DA3FF;
+  --color-accent: #7ED957;
+  --color-light: #EAF4FF;
+  --color-light-100: #CFE9FF;
+  --color-muted: #6B8FB8;
+
+  /* Typography */
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui;
+
+  /* Custom Animations */
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  /* Technical Services Slider Animation */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-340px * 5)); } /* Card width (300px) + Gap (40px) * Unique Cards (5) */
+  }
+
+  --animate-pulse-slow: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-infinite-scroll: scroll 35s linear infinite; /* Smooth slow crawl */
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  @apply font-sans antialiased;
+}
+
+/* Reusable Components */
+@utility section-title {
+  @apply text-2xl md:text-3xl font-bold text-center mb-12 relative pb-4 text-primary;
+}
+
+@utility glass-card {
+  @apply bg-white rounded-3xl border border-light-100 shadow-lg hover:shadow-2xl transition-all duration-300;
+}
+
+/* Pause slider on hover */
+.slider-container:hover .slider-track {
+  animation-play-state: paused;
+}
