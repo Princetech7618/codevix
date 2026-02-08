@@ -15,11 +15,23 @@ import {
 } from "react-icons/fa";
 
 export const metadata = {
-  title: "Our Services | Softnexis Gentech",
+  title: "Professional IT Services | Custom SaaS, Java & Python Development",
   description:
-    "Explore our comprehensive IT services including web development, app development, software solutions, CRM systems, digital marketing, and SEO services.",
-  keywords:
-    "web development, app development, software development, CRM solutions, digital marketing, SEO services, e-commerce solutions",
+    "Softnexis Gentech offers expert Java Spring Boot, Python Django, and React.js development. We specialize in Multi-tenant SaaS, Hospital Management Systems, Travel CRM, and Enterprise software solutions.",
+  keywords: [
+    "Softnexis Gentech Services",
+    "Java Spring Boot development",
+    "Python Django web applications",
+    "Multi-tenant SaaS Travel CRM",
+    "Hospital Management Software India",
+    "School ERP Solutions",
+    "Enterprise Software Engineering",
+    "MERN Stack Development",
+    "Custom CRM Solutions",
+    "AWS Cloud Deployment Services",
+    "Scalable Business Automation",
+    "Fintech Payment Integration"
+  ].join(", "),
 };
 
 export default function Services() {

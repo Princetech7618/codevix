@@ -19,11 +19,21 @@ import {
 } from "react-icons/fa";
 
 export const metadata = {
-  title: "Our Products | Softnexis Gentech",
+  title: "Our Products | SaaS, E-commerce & Real-time Chat Solutions",
   description:
-    "Explore our ready-to-deploy CRM and management systems for hospitals, schools, travel agencies, real estate, inventory, and task management.",
-  keywords:
-    "hospital management system, school management system, travel CRM, real estate CRM, inventory management, task manager",
+    "Explore Softnexis Gentech's ready-to-deploy products: B2C Travel CRM, Custom E-commerce websites, and Real-time Chat applications. We provide scalable Hospital, School, and Inventory management systems.",
+  keywords: [
+    "B2C Travel CRM Software",
+    "Real-time Chat Web Application",
+    "Custom E-commerce Website Development",
+    "Multi-tenant SaaS Travel Solutions",
+    "Hospital Management System Software",
+    "School ERP & Administration Platform",
+    "WebSocket Powered Chat App",
+    "Inventory Management SaaS",
+    "Secure Payment Integrated E-commerce",
+    "Enterprise Software Solutions India"
+  ].join(", "),
 };
 
 export default function Products() {

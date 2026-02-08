@@ -11,7 +11,7 @@ import {
 export const metadata = {
   title: 'Top Technology Stack | Java, Python, AWS & React Development - Softnexis',
   description: 'Softnexis Gentech specializes in high-performance application development using Java, Spring Boot, Python, React, Next.js, and AWS. We build secure and scalable enterprise solutions.',
-  keywords: 'Java development, Spring Boot microservices, Python Django Flask, React JS experts, Next.js development company, AWS EC2 RDS deployment, PostgreSQL MySQL database management, Flutter mobile apps, Electron JS desktop apps, Softnexis technologies',
+  keywords: 'Java development, Spring Boot microservices, Python Django Flask, React JS experts, Next.js development company, AWS EC2 RDS deployment, PostgreSQL MySQL database management, Flutter mobile apps, Electron JS desktop apps, Softnexis technologies,Real-time Chat App WebSockets,Softnexis Gentech technologies,B2C Travel CRM technology',
   openGraph: {
     title: 'Modern Technology Stack at Softnexis Gentech',
     description: 'Building secure, scalable, and robust applications with modern technologies.',

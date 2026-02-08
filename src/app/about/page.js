@@ -15,9 +15,18 @@ import {
 } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'About Us | Softnexis Gentech',
-  description: 'Learn about Softnexis Gentech - our mission, vision, values, and the team behind our innovative IT solutions.',
-  keywords: 'about us, company profile, mission, vision, values, IT solutions company',
+  title: 'About Softnexis Gentech | Experts in SaaS & Enterprise Software',
+  description: 'Softnexis Gentech is a leading technology partner specializing in Java Spring Boot, Python, and React.js. We deliver scalable SaaS, Fintech, and Healthcare solutions with high-performance cloud architectures.',
+  keywords: [
+    'Softnexis Gentech Company Profile',
+    'Enterprise Software Experts India',
+    'Custom SaaS Development Team',
+    'Java Backend Development Agency',
+    'Scalable IT Solutions Provider',
+    'Fintech Software Specialists',
+    'Healthcare IT Innovation',
+    'Cloud-Native Application Development'
+  ].join(', '),
 };
 
 export default function About() {

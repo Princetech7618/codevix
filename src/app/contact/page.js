@@ -3,9 +3,19 @@ import { FaEnvelope, FaPhone, FaGlobe, FaMapMarkerAlt, FaInstagram, FaLinkedin, 
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'Contact Us | Softnexis Gentech',
-  description: 'Get in touch with Softnexis Gentech for IT solutions and services. Contact us via phone, email, or fill out our inquiry form.',
-  keywords: 'contact, inquiry, IT solutions, support, consultation',
+  title: 'Contact Softnexis Gentech | Hire Expert Java & Python Developers',
+  description: 'Get a free consultation for your next IT project. Contact Softnexis Gentech for custom SaaS, CRM, and Enterprise software development using Java, Spring Boot, and React.js.',
+  keywords: [
+    'Contact Softnexis Gentech',
+    'Hire Java Spring Boot Developers',
+    'Python Django Consulting India',
+    'Software Development Inquiry',
+    'Custom SaaS Project Consultation',
+    'IT Solutions Support Noida',
+    'Request a Demo Softnexis',
+    'Enterprise Software Development Quote',
+    'Hire MERN Stack Development Team'
+  ].join(', '),
 };
 
 export default function Contact() {

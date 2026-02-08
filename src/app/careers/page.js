@@ -3,9 +3,19 @@ import { FaBriefcase, FaRocket, FaUsers, FaChartLine, FaEnvelope, FaPhone ,FaUse
 import CareerForm from '@/components/CareerForm';
 
 export const metadata = {
-  title: 'Careers | Softnexis Gentech',
-  description: 'Join our team at Softnexis Gentech. Explore career opportunities in web development, app development, software engineering, digital marketing, and more.',
-  keywords: 'careers, jobs, employment, IT jobs, developer jobs, marketing jobs',
+  title: 'Careers at Softnexis Gentech | Join Our Tech Team',
+  description: 'Build your career with Softnexis Gentech. We are hiring MERN Stack Interns, Java Developers, and Python Enthusiasts to work on scalable SaaS and Fintech projects.',
+  keywords: [
+    'Careers at Softnexis Gentech',
+    'MERN Stack Internship 2026',
+    'Java Spring Boot Jobs India',
+    'Python Django Developer Openings',
+    'Software Engineering Internships',
+    'Full Stack Developer Careers',
+    'IT Jobs for Freshers',
+    'Work at Softnexis Gentech',
+    'Web Development Internships Noida'
+  ].join(', '),
 };
 
 export default function Careers() {

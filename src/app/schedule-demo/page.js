@@ -3,9 +3,20 @@ import { FaCalendarAlt, FaRocket, FaLaptop, FaCloud, FaPhone, FaEnvelope,FaHospi
 import DemoForm from '@/components/DemoForm';
 
 export const metadata = {
-  title: 'Schedule Demo | Softnexis Gentech',
-  description: 'Schedule a product demonstration with Softnexis Gentech. Book a demo for our IT solutions and services.',
-  keywords: 'schedule demo, product demo, IT solutions demo, software demo',
+  title: 'Schedule a Demo | Expert SaaS & Enterprise Software Solutions',
+  description: 'Book a live demonstration of Softnexis Gentech products. See our B2C Travel CRM, Hospital Management Systems, and E-commerce platforms in action. Let’s build your custom IT solution.',
+  keywords: [
+    'Schedule a Product Demo',
+    'Live Software Demonstration',
+    'B2C Travel CRM Demo',
+    'Hospital Management System Walkthrough',
+    'E-commerce Platform Demo',
+    'Book a Technical Consultation',
+    'Custom SaaS Demo Softnexis',
+    'Java Spring Boot Project Demo',
+    'Real-time Chat App Demonstration',
+    'Enterprise ERP Demo India'
+  ].join(', '),
 };
 
 export default function ScheduleDemo() {
