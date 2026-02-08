@@ -31,7 +31,7 @@ export const metadata = {
 
 export default function Technologies() {
   const techStack = [
-    {
+    {  
       category: "Backend Development",
       description: "We build robust and secure server-side architectures using industry-leading frameworks like Spring Boot and Django.",
       techs: [
