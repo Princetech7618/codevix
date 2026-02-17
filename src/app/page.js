@@ -1,5 +1,8 @@
 import { Metadata } from "next";
+
 import Link from "next/link";
+import Hero from "@/components/Hero";
+import Crmcard from "@/components/Crmcard";
 import {
   FaRocket,
   FaGlobe,
@@ -9,12 +12,7 @@ import {
   FaSearch,
   FaShoppingCart,
   FaFileAlt,
-  FaHospital,
-  FaSchool,
-  FaPlane,
-  FaBuilding,
-  FaBox,
-  FaTasks,
+ 
   FaCheckCircle,
   FaLightbulb,
   FaUserCheck,
@@ -33,6 +31,7 @@ import {
      FaInfinity,
 } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiReact, SiNodedotjs } from 'react-icons/si';
+import SpecialOfferCard from "@/components/Specialcard";
 
 export const metadata = {
   title: "Softnexis Gentech | Smart IT Solutions",
@@ -46,7 +45,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-background-light via-background-gradient to-accent pt-24 pb-20 md:pt-32 md:pb-24 text-center px-4">
+      {/* <div className="bg-gradient-to-br from-background-light via-background-gradient to-accent pt-24 pb-20 md:pt-32 md:pb-24 text-center px-4">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block bg-gradient-to-r from-primary-light to-accent text-white px-8 py-3 rounded-full text-sm font-semibold mb-8 animate-pulse-slow shadow-lg">
             <FaRocket className="inline mr-2" /> Your Technology Partner
@@ -80,12 +79,12 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </div>
-
+      </div> */}
+<Hero />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Introduction Section */}
-        <div className="bg-white rounded-2xl shadow-lg border-2 border-background-light p-6 md:p-8 mb-12 animate-on-scroll">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">
+
+<div className="bg-white rounded-3xl p-8 md:p-12 mb-12 border-l-[6px] border-[#78d56f] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 animate-on-scroll group">       <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">
             Building Digital Excellence
           </h2>
           <p className="text-text-secondary text-lg leading-relaxed mb-4">
@@ -112,119 +111,41 @@ export default function Home() {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {/* Web Development */}
-          <div className="bg-background-light rounded-2xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
-            <div className="text-4xl mb-4 text-primary-light">
-              <FaGlobe />
-            </div>
-            <h3 className="text-xl font-semibold text-primary-light mb-3">
-              Web Development
-            </h3>
-            <p className="text-text-muted">
-              Custom websites, e-commerce platforms, and web applications built
-              with modern technologies for optimal performance.
-            </p>
-          </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 p-4">
+  {[
+    { icon: <FaGlobe />, title: "Web Development", desc: "Custom websites, e-commerce platforms, and web applications built with modern technologies for optimal performance." },
+    { icon: <FaMobileAlt />, title: "App Development", desc: "Native Android & iOS applications with seamless user experience and powerful functionality." },
+    { icon: <FaLaptopCode />, title: "Software Development", desc: "Enterprise-grade custom software solutions tailored to your unique business requirements." },
+    { icon: <FaChartLine />, title: "CRM Solutions", desc: "Ready-to-deploy CRM systems for various industries - Hospital, School, Travel, Real Estate & more." },
+    { icon: <FaBullhorn />, title: "Digital Marketing", desc: "Complete digital marketing strategies including social media, content marketing, and online advertising." },
+    { icon: <FaSearch />, title: "SEO Services", desc: "Search engine optimization to boost your online visibility and drive organic traffic to your business." },
+    { icon: <FaShoppingCart />, title: "E-Commerce Solutions", desc: "Full-featured online stores with payment integration, inventory management, and analytics." },
+    { icon: <FaFileAlt />, title: "Static Websites", desc: "Fast, secure, and professional static websites perfect for portfolios, landing pages, and business sites." }
+  ].map((service, index) => (
+    <div key={index} className="group relative bg-white rounded-3xl p-8 text-center border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-on-scroll overflow-hidden">
+      
+      {/* Background Decorative Gradient (Expensive Look) */}
+      <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#78d56f]/10 rounded-full group-hover:scale-[3] transition-transform duration-700 ease-in-out"></div>
+      
+      {/* Icon Wrapper */}
+      <div className="relative z-10 w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-gray-50 text-[#78d56f] text-4xl group-hover:bg-[#78d56f] group-hover:text-white transition-all duration-300 shadow-inner">
+        {service.icon}
+      </div>
 
-          {/* App Development */}
-          <div className="bg-background-light rounded-2xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
-            <div className="text-4xl mb-4 text-primary-light">
-              <FaMobileAlt />
-            </div>
-            <h3 className="text-xl font-semibold text-primary-light mb-3">
-              App Development
-            </h3>
-            <p className="text-text-muted">
-              Native Android & iOS applications with seamless user experience
-              and powerful functionality.
-            </p>
-          </div>
+      {/* Content */}
+      <h3 className="relative z-10 text-xl font-bold text-gray-800 mb-4 group-hover:text-[#78d56f] transition-colors duration-300">
+        {service.title}
+      </h3>
+      
+      <p className="relative z-10 text-gray-500 leading-relaxed text-sm md:text-base">
+        {service.desc}
+      </p>
 
-          {/* Software Development */}
-          <div className="bg-background-light rounded-2xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
-            <div className="text-4xl mb-4 text-primary-light">
-              <FaLaptopCode />
-            </div>
-            <h3 className="text-xl font-semibold text-primary-light mb-3">
-              Software Development
-            </h3>
-            <p className="text-text-muted">
-              Enterprise-grade custom software solutions tailored to your unique
-              business requirements.
-            </p>
-          </div>
-
-          {/* CRM Solutions */}
-          <div className="bg-background-light rounded-2xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
-            <div className="text-4xl mb-4 text-primary-light">
-              <FaChartLine />
-            </div>
-            <h3 className="text-xl font-semibold text-primary-light mb-3">
-              CRM Solutions
-            </h3>
-            <p className="text-text-muted">
-              Ready-to-deploy CRM systems for various industries - Hospital,
-              School, Travel, Real Estate & more.
-            </p>
-          </div>
-
-          {/* Digital Marketing */}
-          <div className="bg-background-light rounded-2xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
-            <div className="text-4xl mb-4 text-primary-light">
-              <FaChartLine />
-            </div>
-            <h3 className="text-xl font-semibold text-primary-light mb-3">
-              Digital Marketing
-            </h3>
-            <p className="text-text-muted">
-              Complete digital marketing strategies including social media,
-              content marketing, and online advertising.
-            </p>
-          </div>
-
-          {/* SEO Services */}
-          <div className="bg-background-light rounded-2xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
-            <div className="text-4xl mb-4 text-primary-light">
-              <FaSearch />
-            </div>
-            <h3 className="text-xl font-semibold text-primary-light mb-3">
-              SEO Services
-            </h3>
-            <p className="text-text-muted">
-              Search engine optimization to boost your online visibility and
-              drive organic traffic to your business.
-            </p>
-          </div>
-
-          {/* E-Commerce Solutions */}
-          <div className="bg-background-light rounded-2xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
-            <div className="text-4xl mb-4 text-primary-light">
-              <FaShoppingCart />
-            </div>
-            <h3 className="text-xl font-semibold text-primary-light mb-3">
-              E-Commerce Solutions
-            </h3>
-            <p className="text-text-muted">
-              Full-featured online stores with payment integration, inventory
-              management, and analytics.
-            </p>
-          </div>
-
-          {/* Static Websites */}
-          <div className="bg-background-light rounded-2xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
-            <div className="text-4xl mb-4 text-primary-light">
-              <FaFileAlt />
-            </div>
-            <h3 className="text-xl font-semibold text-primary-light mb-3">
-              Static Websites
-            </h3>
-            <p className="text-text-muted">
-              Fast, secure, and professional static websites perfect for
-              portfolios, landing pages, and business sites.
-            </p>
-          </div>
-        </div>
+      {/* Bottom Accent Line */}
+      <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#78d56f] group-hover:w-full transition-all duration-500"></div>
+    </div>
+  ))}
+</div>
 
         {/* CRM Section */}
         <div className="bg-accent/10 rounded-2xl border-2 border-accent p-6 md:p-8 mb-12 animate-on-scroll">
@@ -237,90 +158,9 @@ export default function Home() {
             needs!
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Hospital Management */}
-            <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
-              <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaHospital className="mr-2 text-green-500" /> Hospital
-                Management System
-              </h4>
-              <p className="text-text-muted">
-                Complete hospital operations - patient records, appointments,
-                billing, inventory, and staff management.
-              </p>
-            </div>
+        <Crmcard /> 
 
-            {/* School Management */}
-            <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
-              <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaSchool className="mr-2 text-green-500" /> School Management
-                System
-              </h4>
-              <p className="text-text-muted">
-                Student admissions, attendance, grades, fee management, and
-                parent-teacher communication portal.
-              </p>
-            </div>
-
-            {/* Travel CRM */}
-            <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
-              <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaPlane className="mr-2 text-green-500" /> Travel CRM
-              </h4>
-              <p className="text-text-gray">
-                Booking management, itinerary planning, customer management, and
-                payment tracking for travel agencies.
-              </p>
-              <span className="inline-block bg-gradient-to-r from-accent to-primary-light text-white px-4 py-1 rounded-full text-sm font-semibold mt-3">
-                + Free Landing Website
-              </span>
-            </div>
-
-            {/* Real Estate CRM */}
-            <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
-              <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaBuilding className="mr-2 text-green-500" /> Real Estate CRM
-              </h4>
-              <p className="text-text-muted">
-                Property listings, lead management, client database, document
-                management, and sales tracking.
-              </p>
-            </div>
-
-            {/* Inventory Management */}
-            <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
-              <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaBox className="mr-2 text-green-500" /> Inventory Management
-              </h4>
-              <p className="text-text-muted">
-                Stock tracking, order management, supplier management, and
-                real-time inventory reports.
-              </p>
-            </div>
-
-            {/* Task Manager */}
-            <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
-              <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaTasks className="mr-2 text-green-500" /> Task Manager
-              </h4>
-              <p className="text-text-muted">
-                Project management, task assignment, team collaboration, and
-                productivity tracking tools.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 bg-white rounded-xl p-6 text-center border-2 border-background-gradient">
-            <p className="text-accent font-bold text-lg mb-2">
-              <FaCheckCircle className="inline mr-2" /> Special Offer:
-            </p>
-            <p className="text-text-secondary">
-              Get a free landing website with Travel CRM!
-            </p>
-            <p className="text-text-muted mt-2">
-              Deploy our solutions on your own domain instantly.
-            </p>
-          </div>
+         <SpecialOfferCard />
         </div>
 
         {/* Real-time Chatting Application Section */}
@@ -655,9 +495,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Innovation First */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-primary-light shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
-                <FaLightbulb className="mr-2 text-yellow-400" /> Innovation
+                <FaLightbulb className="mr-2 text-accent" /> Innovation
                 First
               </h4>
               <p className="text-text-muted">
@@ -667,7 +507,7 @@ export default function Home() {
             </div>
 
             {/* Client-Focused Approach */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-primary-light shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
                 <FaUserCheck className="mr-2 text-accent" /> Client-Focused
                 Approach
@@ -679,9 +519,9 @@ export default function Home() {
             </div>
 
             {/* Fast Delivery */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-primary-light shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
-                <FaBolt className="mr-2 text-yellow-400" /> Fast Delivery
+                <FaBolt className="mr-2 text-accent" /> Fast Delivery
               </h4>
               <p className="text-text-muted">
                 Agile development methodology ensures quick turnaround times
@@ -690,7 +530,7 @@ export default function Home() {
             </div>
 
             {/* Reliable & Secure */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-primary-light shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
                 <FaLock className="mr-2 text-accent" /> Reliable & Secure
               </h4>
@@ -701,7 +541,7 @@ export default function Home() {
             </div>
 
             {/* Competitive Pricing */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-primary-light shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
                 <FaDollarSign className="mr-2 text-accent" /> Competitive
                 Pricing
@@ -713,9 +553,9 @@ export default function Home() {
             </div>
 
             {/* Full Support */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-primary-light shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
-                <FaHeadset className="mr-2 text-yellow-400" /> Full Support
+                <FaHeadset className="mr-2 text-accent" /> Full Support
               </h4>
               <p className="text-text-muted">
                 Dedicated support team available to help you succeed. Training

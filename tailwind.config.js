@@ -53,8 +53,18 @@ module.exports = {
         white: '#ffffff',
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-      },
+  sans: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          'Oxygen',
+          'Ubuntu',
+          'Cantarell',
+          '"Helvetica Neue"',
+          'sans-serif',
+        ],
+            },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
