@@ -5,10 +5,10 @@ import { FaRocket } from 'react-icons/fa';
 
 function Hero() {
   return (
-    <section className="relative w-full flex items-center justify-center bg-green-100 overflow-hidden">
+<section className="relative w-full min-h-screen flex items-center justify-center bg-green-100 overflow-x-hidden">
 
       {/* Ballpit Background - Fixed Positioning */}
-      <div className="absolute inset-0 z-0">
+<div className="absolute inset-0 z-0 pointer-events-none">
         <Ballpit
           count={100}
           gravity={0.05}
