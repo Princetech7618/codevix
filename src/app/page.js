@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import Link from "next/link";
-import Hero from "@/components/Hero";
+// import Hero from "@/components/Hero";
 import Crmcard from "@/components/Crmcard";
 import {
   FaRocket,
@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      {/* <div className="bg-gradient-to-br from-background-light via-background-gradient to-accent pt-24 pb-20 md:pt-32 md:pb-24 text-center px-4">
+      <div className="bg-gradient-to-br from-background-light via-background-gradient to-accent pt-24 pb-20 md:pt-32 md:pb-24 text-center px-4">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block bg-gradient-to-r from-primary-light to-accent text-white px-8 py-3 rounded-full text-sm font-semibold mb-8 animate-pulse-slow shadow-lg">
             <FaRocket className="inline mr-2" /> Your Technology Partner
@@ -79,8 +79,8 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </div> */}
-<Hero />
+      </div>
+{/* <Hero /> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Introduction Section */}
 

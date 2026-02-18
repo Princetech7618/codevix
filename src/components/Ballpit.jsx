@@ -256,8 +256,8 @@ function S(e) {
 
         document.body.addEventListener('touchstart', TouchStart, { passive: false });
         document.body.addEventListener('touchmove', TouchMove, { passive: false });
-        document.body.addEventListener('touchend', TouchEnd, { passive: false });
-        document.body.addEventListener('touchcancel', TouchEnd, { passive: false });
+        document.body.addEventListener('touchend', TouchEnd);
+        document.body.addEventListener('touchcancel', TouchEnd);
 
         R = true;
       }
