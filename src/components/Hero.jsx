@@ -14,7 +14,7 @@ function Hero() {
           gravity={0.05}
           friction={0.99}
           wallBounce={0.95}
-          followCursor={true}
+followCursor={typeof window !== "undefined" && window.innerWidth > 768}
           colors={["#4fa8f7", "#6fcf8c", "#334155"]}
         />
       </div>

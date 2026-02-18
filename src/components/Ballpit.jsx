@@ -346,26 +346,11 @@ function TouchStart(e) {
 }
 
 function TouchMove(e) {
+  if (!R) return; // mobile scroll free
+
   if (e.touches.length > 0) {
-    e.preventDefault();
     A.x = e.touches[0].clientX;
     A.y = e.touches[0].clientY;
-
-    for (const [elem, t] of b) {
-      const rect = elem.getBoundingClientRect();
-      P(t, rect);
-
-      if (D(rect)) {
-        if (!t.hover) {
-          t.hover = true;
-          t.touching = true;
-          t.onEnter(t);
-        }
-        t.onMove(t);
-      } else if (t.hover && t.touching) {
-        t.onMove(t);
-      }
-    }
   }
 }
 
@@ -669,9 +654,16 @@ function createBallpit(e, t = {}) {
   const r = new a();
   let c = false;
 
-  e.style.touchAction = 'none';
-  e.style.userSelect = 'none';
-  e.style.webkitUserSelect = 'none';
+  // mobile scroll fix
+if (t.followCursor) {
+  e.style.touchAction = 'none';   // desktop interaction
+} else {
+  e.style.touchAction = 'pan-y';  // mobile scroll allow
+}
+
+e.style.userSelect = 'none';
+e.style.webkitUserSelect = 'none';
+
 
   const h = S({
     domElement: e,
