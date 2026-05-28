@@ -2,7 +2,7 @@
 
 // export default function Footer() {
 //   return (
-//     <footer class=" bg-linear-to-br from-light via-light-100 to-green-100 px-4 sm:px-6 pt-12 pb-6">
+//     <footer class=" bg-linear-to-br from-light via-light-100 to-sky-100 px-4 sm:px-6 pt-12 pb-6">
 //       <div class="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 //         <div class="space-y-6">
 //           <h6 class="text-sm text-black font-medium"> SERVICES </h6>
@@ -359,12 +359,12 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-linear-to-br from-light via-light-100 to-green-100 px-4 sm:px-6 pt-12 pb-6 border-t border-light-100 shadow-inner">
+    <footer className="bg-linear-to-br from-light via-light-100 to-sky-100 px-4 sm:px-6 pt-12 pb-6 border-t-3 border-accent shadow-inner">
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         
         {/* Section 1: Our Expertise (Services) */}
         <div className="space-y-6">
-          <h6 className="text-sm text-black font-bold uppercase tracking-wider border-b-2 border-secondary/20 pb-2 w-fit">
+          <h6 className="text-sm text-black font-bold uppercase tracking-wider border-b-2 border-[#38BDF8]/20 pb-2 w-fit">
             Our Expertise
           </h6>
           <ul className="space-y-3">
@@ -372,9 +372,9 @@ export default function Footer() {
               <li key={service.name}>
                 <Link 
                   href={service.href} 
-                  className="flex items-center text-[13px] text-gray-500 hover:text-secondary font-medium transition-all group"
+                  className="flex items-center text-[13px] text-gray-500 hover:text-[#38BDF8] font-medium transition-all group"
                 >
-                  <span className="mr-2 text-secondary/70 group-hover:text-secondary transition-colors">
+                  <span className="mr-2 text-[#38BDF8] group-hover:text-[#38BDF8] transition-colors">
                     {service.icon}
                   </span>
                   {service.name}
@@ -386,7 +386,7 @@ export default function Footer() {
 
         {/* Section 2: Quick Navigation */}
         <div className="space-y-6">
-          <h6 className="text-sm text-black font-bold uppercase tracking-wider border-b-2 border-secondary/20 pb-2 w-fit">
+          <h6 className="text-sm text-black font-bold uppercase tracking-wider border-b-2 border-[#38BDF8]/20 pb-2 w-fit">
             Quick Navigation
           </h6>
           <ul className="space-y-3">
@@ -394,9 +394,9 @@ export default function Footer() {
               <li key={link.name}>
                 <Link 
                   href={link.href} 
-                  className="flex items-center text-[13px] text-gray-500 hover:text-secondary font-medium group"
+                  className="flex items-center text-[13px] text-gray-500 hover:text-[#38BDF8] font-medium group"
                 >
-                  <FaChevronRight className="mr-2 text-[10px] text-secondary/50 group-hover:translate-x-1 transition-transform" />
+                  <FaChevronRight className="mr-2 text-[10px] text-[#38BDF8]/50 group-hover:translate-x-1 transition-transform" />
                   {link.name}
                 </Link>
               </li>
@@ -406,23 +406,23 @@ export default function Footer() {
 
         {/* Section 3: Let's Connect (Contact Info) */}
         <div className="space-y-6">
-          <h6 className="text-sm text-black font-bold uppercase tracking-wider border-b-2 border-secondary/20 pb-2 w-fit">
+          <h6 className="text-sm text-black font-bold uppercase tracking-wider border-b-2 border-[#38BDF8]/20 pb-2 w-fit">
             Let's Connect
           </h6>
           <div className="space-y-4">
             <div className="flex items-center group">
-              <div className="w-8 h-8 flex items-center justify-center bg-secondary/10 text-secondary rounded-lg mr-3">
+              <div className="w-8 h-8 flex items-center justify-center bg-[#38BDF8]/10 text-[#38BDF8] rounded-lg mr-3">
                 <FaPhoneAlt size={14} />
               </div>
-              <a href="tel:+918810338523" className="text-[13px] text-gray-500 font-bold hover:text-secondary">
+              <a href="tel:+918810338523" className="text-[13px] text-gray-500 font-bold hover:text-[#38BDF8]">
                 +91 8810338523
               </a>
             </div>
             <div className="flex items-center group">
-              <div className="w-8 h-8 flex items-center justify-center bg-secondary/10 text-secondary rounded-lg mr-3">
+              <div className="w-8 h-8 flex items-center justify-center bg-[#38BDF8]/10 text-[#38BDF8] rounded-lg mr-3">
                 <FaEnvelope size={14} />
               </div>
-              <a href="mailto:contact@softnexis.in" className="text-[13px] text-gray-500 font-bold hover:text-secondary">
+              <a href="mailto:contact@softnexis.in" className="text-[13px] text-gray-500 font-bold hover:text-[#38BDF8]">
                 contact@softnexis.in
               </a>
             </div>
@@ -439,7 +439,7 @@ export default function Footer() {
 
         {/* Section 4: Social & Newsletter */}
         <div className="space-y-6">
-          <h6 className="text-sm text-black font-bold uppercase tracking-wider border-b-2 border-secondary/20 pb-2 w-fit">
+          <h6 className="text-sm text-black font-bold uppercase tracking-wider border-b-2 border-[#38BDF8]/20 pb-2 w-fit">
             Social Media
           </h6>
           <ul className="flex space-x-4">
@@ -465,7 +465,7 @@ export default function Footer() {
             </p>
             <Link
               href="/contact"
-              className="bg-secondary hover:bg-secondary/90 text-[12px] text-white font-bold py-2.5 px-5 tracking-widest rounded-full shadow-md transition-all uppercase"
+              className="bg-[#38BDF8] hover:bg-[#38BDF8]/90 text-[12px] text-white font-bold py-2.5 px-5 tracking-widest rounded-full shadow-md transition-all uppercase"
             >
               Contact Us
             </Link>
@@ -477,14 +477,14 @@ export default function Footer() {
 
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-gray-400 font-bold text-[13px]">
-          © 2026 Softnexis Gentech.
+          © {new Date().getFullYear()} Softnexis Gentech.
         </p>
         <div className="flex items-center space-x-4">
-           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-secondary">Innovate</span>
+           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#38BDF8]">Innovate</span>
            <div className="w-1 h-1 bg-accent rounded-full"></div>
-           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-secondary">Transform</span>
+           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#38BDF8]">Transform</span>
            <div className="w-1 h-1 bg-accent rounded-full"></div>
-           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-secondary">Succeed</span>
+           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#38BDF8]">Succeed</span>
         </div>
       </div>
     </footer>

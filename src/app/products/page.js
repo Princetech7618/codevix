@@ -40,7 +40,7 @@ export default function Products() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-green via-light-blue to-very-light-blue rounded-2xl p-8 md:p-12 text-center mb-12">
+      <div className="bg-gradient-to-br from-sky via-light-blue to-very-light-blue rounded-2xl p-8 md:p-12 text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
           Our Products
         </h1>
@@ -392,7 +392,7 @@ export default function Products() {
               {/* Real-time Status Badge */}
               <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-light-100">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                  <div className="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></div>
                   <p className="text-[10px] font-black text-primary uppercase tracking-widest">
                     Real-time Active
                   </p>

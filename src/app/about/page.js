@@ -35,7 +35,7 @@ export default function About() {
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-background-light via-background-gradient to-accent rounded-2xl p-8 md:p-12 text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">About Us</h1>
-        <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+        <p className="text-xl  text-text-secondary max-w-3xl mx-auto">
           Your trusted technology partner for digital transformation
         </p>
       </div>
@@ -46,7 +46,7 @@ export default function About() {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
       
       {/* Left Side: Content Box */}
-      <div className="bg-white/80 backdrop-blur-md rounded-[32px] p-6 md:p-10 shadow-xl border border-light-100 relative overflow-hidden group">
+      <div className="bg-white/80 backdrop-blur-md rounded-[32px] p-6 md:p-10 shadow-xl border-t-3 border-b-3 border-accent relative overflow-hidden group">
         <div className="absolute -top-10 -right-10 w-32 h-32 bg-secondary/5 rounded-full blur-3xl group-hover:bg-accent/10 transition-colors duration-700"></div>
         
         <div className="relative z-10">
@@ -84,7 +84,7 @@ export default function About() {
       <div className="relative">
         <div className="absolute -inset-4 bg-linear-to-tr from-secondary to-accent opacity-10 blur-xl rounded-[40px]"></div>
         
-        <div className="relative rounded-[32px] overflow-hidden shadow-xl border-4 border-white transform transition-transform duration-500 hover:scale-[1.01]">
+        <div className="relative rounded-[32px] overflow-hidden shadow-xl border-3 border-accent transform transition-transform duration-500 hover:scale-[1.01]">
           <img 
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
             alt="Softnexis Team Collaboration" 
@@ -116,15 +116,15 @@ export default function About() {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-background-light text-center">
-            <div className="text-4xl mb-4 text-primary-light"><FaBullseye /></div>
+          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-r-3 border-accent border-l-3 border-background-light text-center">
+            <div className="text-4xl mb-4 text-primary-light text-accent"><FaBullseye /></div>
             <h3 className="text-2xl font-semibold text-primary mb-4">Our Mission</h3>
             <p className="text-text-secondary text-lg leading-relaxed">
               To empower businesses with cutting-edge technology solutions that drive efficiency, growth, and competitive advantage.
             </p>
           </div>
-          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-background-light text-center">
-            <div className="text-4xl mb-4 text-primary-light"><FaEye /></div>
+          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-r-3 border-accent border-l-3 border-background-light text-center">
+            <div className="text-4xl mb-4 text-primary-light text-accent"><FaEye /></div>
             <h3 className="text-2xl font-semibold text-primary mb-4">Our Vision</h3>
             <p className="text-text-secondary text-lg leading-relaxed">
               To be the most trusted and innovative IT solutions provider, recognized for transforming businesses through technology.
@@ -141,42 +141,42 @@ export default function About() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Innovation */}
-          <div className="bg-background-light rounded-xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-            <div className="text-3xl mb-3 text-yellow-400"><FaLightbulb /></div>
+          <div className="bg-background-light rounded-xl p-6 text-center border-l-3 border-accent border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="text-3xl mb-3 text-accent"><FaLightbulb /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Innovation</h3>
             <p className="text-text-muted">We constantly explore new technologies and approaches to deliver cutting-edge solutions.</p>
           </div>
 
           {/* Integrity */}
-          <div className="bg-background-light rounded-xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-background-light rounded-xl p-6 text-center border-l-3 border-accent border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
             <div className="text-3xl mb-3 text-accent"><FaHandshake /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Integrity</h3>
             <p className="text-text-muted">We build relationships based on trust, transparency, and ethical business practices.</p>
           </div>
 
           {/* Excellence */}
-          <div className="bg-background-light rounded-xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-            <div className="text-3xl mb-3 text-yellow-400"><FaStar /></div>
+          <div className="bg-background-light rounded-xl p-6 text-center border-l-3 border-accent border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="text-3xl mb-3 text-accent"><FaStar /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Excellence</h3>
             <p className="text-text-muted">We are committed to delivering the highest quality in every project we undertake.</p>
           </div>
 
           {/* Collaboration */}
-          <div className="bg-background-light rounded-xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-background-light rounded-xl p-6 text-center border-l-3 border-accent border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
             <div className="text-3xl mb-3 text-accent"><FaUserCheck /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Collaboration</h3>
             <p className="text-text-muted">We work closely with clients, treating their success as our own.</p>
           </div>
 
           {/* Agility */}
-          <div className="bg-background-light rounded-xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-            <div className="text-3xl mb-3 text-yellow-400"><FaBolt /></div>
+          <div className="bg-background-light rounded-xl p-6 text-center border-l-3 border-accent border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="text-3xl mb-3 text-accent"><FaBolt /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Agility</h3>
             <p className="text-text-muted">We adapt quickly to changing needs and deliver solutions efficiently.</p>
           </div>
 
           {/* Customer Focus */}
-          <div className="bg-background-light rounded-xl p-6 text-center border-2 border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-background-light rounded-xl p-6 text-center border-l-3 border-accent border-background-light hover:border-primary-light hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
             <div className="text-3xl mb-3 text-accent"><FaGlobe /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Customer Focus</h3>
             <p className="text-text-muted">Our clients are at the center of everything we do.</p>
@@ -191,42 +191,42 @@ export default function About() {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white rounded-xl p-6 border-l-4 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
             <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
               <FaCheckCircle className="mr-2 text-accent" /> Proven Track Record
             </h4>
             <p className="text-text-muted">Successful projects across various industries and business sizes.</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-l-4 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
             <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
               <FaCheckCircle className="mr-2 text-accent" /> Technical Expertise
             </h4>
             <p className="text-text-muted">Deep knowledge of current and emerging technologies.</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-l-4 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
             <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
               <FaCheckCircle className="mr-2 text-accent" /> Client-Centric Approach
             </h4>
             <p className="text-text-muted">Solutions tailored to your specific needs and goals.</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-l-4 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
             <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
               <FaCheckCircle className="mr-2 text-accent" /> Quality Assurance
             </h4>
             <p className="text-text-muted">Rigorous testing and quality control processes.</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-l-4 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
             <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
               <FaCheckCircle className="mr-2 text-accent" /> Timely Delivery
             </h4>
             <p className="text-text-muted">Agile methodologies ensure on-time project completion.</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-l-4 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-accent shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
             <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
               <FaCheckCircle className="mr-2 text-accent" /> Competitive Pricing
             </h4>

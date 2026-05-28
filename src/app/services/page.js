@@ -54,9 +54,9 @@ export default function Services() {
         <section id="web-development" className="animate-on-scroll py-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Left Side: Content Box */}
-            <div className="bg-white rounded-[32px] p-6 md:p-10 shadow-xl border border-light-100 group hover:border-secondary transition-all">
+            <div className="bg-white rounded-[32px] p-6 md:p-10 shadow-xl border-2 border-light-100 group hover:border-[#79d66b] transition-all">
               <h4 className="text-xl md:text-2xl font-bold text-primary mb-4 flex items-center tracking-tight">
-                <FaGlobe className="mr-3 text-secondary" size={20} /> Web
+                <FaGlobe className="mr-3 text-accent" size={20} /> Web
                 Development
               </h4>
               <p className="text-muted text-sm md:text-base mb-6 leading-relaxed font-medium">
@@ -91,7 +91,7 @@ export default function Services() {
             </div>
 
             {/* Right Side: Professional Coding Image */}
-            <div className="relative group overflow-hidden rounded-[32px] shadow-2xl border-4 border-white h-[350px]">
+            <div className="relative group overflow-hidden rounded-[32px] shadow-2xl border-2 border-light-100 hover:border-[#79d66b] h-[350px]">
               <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
               <img
                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
@@ -115,7 +115,7 @@ export default function Services() {
         <section id="app-development" className="animate-on-scroll py-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Left Side: Professional App Mockup Image */}
-            <div className="order-2 lg:order-1 relative group overflow-hidden rounded-[32px] shadow-2xl border-4 border-white h-[350px]">
+            <div className="order-2 lg:order-1 relative group overflow-hidden rounded-[32px] shadow-2xl border-2 hover:border-[#79d66b] border-white h-[350px]">
               <div className="absolute inset-0 bg-secondary/5 group-hover:bg-transparent transition-colors z-10"></div>
               <img
                 src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop"
@@ -131,9 +131,9 @@ export default function Services() {
             </div>
 
             {/* Right Side: Content Box */}
-            <div className="order-1 lg:order-2 bg-white rounded-[32px] p-6 md:p-10 shadow-xl border border-light-100 group hover:border-accent transition-all">
+            <div className="order-1 lg:order-2 bg-white rounded-[32px] p-6 md:p-10 shadow-xl border-2 border-light-100 group hover:border-[#79d66b] transition-all">
               <h4 className="text-xl md:text-2xl font-bold text-primary mb-4 flex items-center tracking-tight">
-                <FaMobileAlt className="mr-3 text-secondary" size={20} /> App
+                <FaMobileAlt className="mr-3 text-[#79d66b]" size={20} /> App
                 Development
               </h4>
               <p className="text-muted text-sm md:text-base mb-6 leading-relaxed font-medium">

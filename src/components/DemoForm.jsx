@@ -57,7 +57,7 @@ export default function DemoForm() {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-background-light">
+    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-t-3 border-b-3 border-accent border-background-light">
       <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Schedule a Demo</h2>
       <p className="text-text-secondary mb-8">
         Fill out the form below to request a product demonstration.
@@ -76,7 +76,7 @@ export default function DemoForm() {
             onChange={handleChange}
             required
             placeholder="Your Name"
-            className="w-full px-4 py-3 border-2 border-background-light rounded-lg form-input transition-all duration-300"
+            className="w-full px-4 py-3 border-b-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent border-background-light rounded-lg form-input transition-all duration-300"
           />
         </div>
         
@@ -92,7 +92,7 @@ export default function DemoForm() {
             onChange={handleChange}
             required
             placeholder="Your Company Name"
-            className="w-full px-4 py-3 border-2 border-background-light rounded-lg form-input transition-all duration-300"
+            className="w-full px-4 py-3 border-b-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent border-background-light rounded-lg form-input transition-all duration-300"
           />
         </div>
         
@@ -108,7 +108,7 @@ export default function DemoForm() {
             onChange={handleChange}
             required
             placeholder="your@email.com"
-            className="w-full px-4 py-3 border-2 border-background-light rounded-lg form-input transition-all duration-300"
+            className="w-full px-4 py-3 border-b-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent border-background-light rounded-lg form-input transition-all duration-300"
           />
         </div>
         
@@ -124,7 +124,7 @@ export default function DemoForm() {
             onChange={handleChange}
             required
             placeholder="+91 "
-            className="w-full px-4 py-3 border-2 border-background-light rounded-lg form-input transition-all duration-300"
+            className="w-full px-4 py-3 border-b-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent border-background-light rounded-lg form-input transition-all duration-300"
           />
         </div>
         
@@ -140,7 +140,7 @@ export default function DemoForm() {
               value={formData.date}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border-2 border-background-light rounded-lg form-input transition-all duration-300"
+              className="w-full px-4 py-3 border-b-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent border-background-light rounded-lg form-input transition-all duration-300"
             />
           </div>
           <div>
@@ -154,7 +154,7 @@ export default function DemoForm() {
               value={formData.time}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border-2 border-background-light rounded-lg form-input transition-all duration-300"
+              className="w-full px-4 py-3 border-b-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent border-background-light rounded-lg form-input transition-all duration-300"
             />
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function DemoForm() {
             onChange={handleChange}
             rows="4"
             placeholder="Tell us about your requirements or questions..."
-            className="w-full px-4 py-3 border-2 border-background-light rounded-lg form-input transition-all duration-300 resize-y"
+            className="w-full px-4 py-3 border-b-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent border-background-light rounded-lg form-input transition-all duration-300 resize-y"
           ></textarea>
         </div>
         

@@ -8,11 +8,11 @@
 //   theme: {
 //     extend: {
 //       colors: {
-//         primary: '#4DA3FF',
-//         primaryDark: '#2F80ED',
-//         lightBlue: '#EAF4FF',
-//         softBlue: '#CFE9FF',
-//         accentGreen: '#7ED957',
+//         primary: '#38bdf8',
+//         primaryDark: '#0ea5e9',
+//         lightBlue: '#eff6ff',
+//         softBlue: '#7dd3fc',
+//         accent: '#38bdf8',
 //         textGray: '#6B8FB8',
 //       },
 //       fontFamily: {
@@ -31,23 +31,35 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        blue: {
+          50: '#eff6ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+        },
         primary: {
-          DEFAULT: '#2F80ED',
-          light: '#4DA3FF',
-          dark: '#1E5FC7',
+          DEFAULT: '#38bdf8',
+          light: '#7dd3fc',
+          dark: '#0ea5e9',
         },
         accent: {
-          DEFAULT: '#7ED957',
-          light: '#9EE87A',
-          dark: '#5CB53D',
+          DEFAULT: '#38bdf8',
+          light: '#7dd3fc',
+          dark: '#0ea5e9',
         },
         background: {
           light: '#EAF4FF',
           gradient: '#CFE9FF',
         },
         text: {
-          primary: '#2F80ED',
-          secondary: '#4F8FCF',
+          primary: '#0ea5e9',
+          secondary: '#38bdf8',
           muted: '#6B8FB8',
         },
         white: '#ffffff',

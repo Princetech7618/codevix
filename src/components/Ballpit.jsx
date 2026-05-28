@@ -231,11 +231,17 @@ class x {
   }
 }
 
-const b = new Map(),
-  A = new r();
-let R = false;
-function S(e) {
-  const t = {
+// ─── FIXED Pointer/Touch Manager ─────────────────────────────────────────────
+// Key fix: touch events are now attached to the CANVAS (not document.body)
+// with passive:true so the browser can still scroll normally.
+// Only when the canvas is explicitly interacted with do we update the physics.
+
+const pointerMap = new Map();
+const globalPointer = new r();
+let globalListenersAdded = false;
+
+function createPointerHandler(config) {
+  const state = {
     position: new r(),
     nPosition: new r(),
     hover: false,
@@ -244,140 +250,127 @@ function S(e) {
     onMove() {},
     onClick() {},
     onLeave() {},
-    ...e
+    ...config
   };
-  (function (e, t) {
-    if (!b.has(e)) {
-      b.set(e, t);
-      if (!R) {
-        document.body.addEventListener('pointermove', M);
-        document.body.addEventListener('pointerleave', L);
-        document.body.addEventListener('click', C);
 
-        document.body.addEventListener('touchstart', TouchStart, { passive: false });
-        document.body.addEventListener('touchmove', TouchMove, { passive: false });
-        document.body.addEventListener('touchend', TouchEnd);
-        document.body.addEventListener('touchcancel', TouchEnd);
+  const elem = config.domElement;
 
-        R = true;
+  // ── helpers ──────────────────────────────────────────────────────────────
+  function updateFromPoint(clientX, clientY) {
+    const rect = elem.getBoundingClientRect();
+    state.position.x = clientX - rect.left;
+    state.position.y = clientY - rect.top;
+    state.nPosition.x = (state.position.x / rect.width) * 2 - 1;
+    state.nPosition.y = (-state.position.y / rect.height) * 2 + 1;
+  }
+
+  function isInsideRect(clientX, clientY) {
+    const rect = elem.getBoundingClientRect();
+    return (
+      clientX >= rect.left &&
+      clientX <= rect.right &&
+      clientY >= rect.top &&
+      clientY <= rect.bottom
+    );
+  }
+
+  // ── mouse events (attached to window so they work after pointer leaves) ──
+  function onPointerMove(e) {
+    const inside = isInsideRect(e.clientX, e.clientY);
+    updateFromPoint(e.clientX, e.clientY);
+    if (inside) {
+      if (!state.hover) { state.hover = true; state.onEnter(state); }
+      state.onMove(state);
+    } else if (state.hover && !state.touching) {
+      state.hover = false;
+      state.onLeave(state);
+    }
+  }
+
+  function onPointerLeave() {
+    if (state.hover && !state.touching) {
+      state.hover = false;
+      state.onLeave(state);
+    }
+  }
+
+  function onClick(e) {
+    if (isInsideRect(e.clientX, e.clientY)) {
+      updateFromPoint(e.clientX, e.clientY);
+      state.onClick(state);
+    }
+  }
+
+  // ── touch events (passive:true so page scrolls freely) ───────────────────
+  // We track touches that START on the canvas. If the finger later moves
+  // outside, we continue updating physics (feels natural) but do NOT block
+  // the browser's native scroll gesture.
+  let activeTouchId = null;
+
+  function onTouchStart(e) {
+    // Don't call preventDefault — let the browser decide about scrolling
+    const touch = e.changedTouches[0];
+    if (activeTouchId !== null) return;         // already tracking one finger
+    if (!isInsideRect(touch.clientX, touch.clientY)) return;
+    activeTouchId = touch.identifier;
+    state.touching = true;
+    updateFromPoint(touch.clientX, touch.clientY);
+    if (!state.hover) { state.hover = true; state.onEnter(state); }
+    state.onMove(state);
+  }
+
+  function onTouchMove(e) {
+    if (activeTouchId === null) return;
+    // find our tracked finger
+    let touch = null;
+    for (let i = 0; i < e.changedTouches.length; i++) {
+      if (e.changedTouches[i].identifier === activeTouchId) {
+        touch = e.changedTouches[i]; break;
       }
     }
-  })(e.domElement, t);
-  t.dispose = () => {
-    const t = e.domElement;
-    b.delete(t);
-    if (b.size === 0) {
-      document.body.removeEventListener('pointermove', M);
-      document.body.removeEventListener('pointerleave', L);
-      document.body.removeEventListener('click', C);
+    if (!touch) return;
+    updateFromPoint(touch.clientX, touch.clientY);
+    state.onMove(state);
+  }
 
-      document.body.removeEventListener('touchstart', TouchStart);
-      document.body.removeEventListener('touchmove', TouchMove);
-      document.body.removeEventListener('touchend', TouchEnd);
-      document.body.removeEventListener('touchcancel', TouchEnd);
-
-      R = false;
+  function onTouchEnd(e) {
+    if (activeTouchId === null) return;
+    for (let i = 0; i < e.changedTouches.length; i++) {
+      if (e.changedTouches[i].identifier === activeTouchId) {
+        activeTouchId = null;
+        state.touching = false;
+        if (state.hover) { state.hover = false; state.onLeave(state); }
+        break;
+      }
     }
+  }
+
+  // Attach mouse/click listeners to window (so move after mousedown outside still works)
+  window.addEventListener('pointermove', onPointerMove);
+  window.addEventListener('pointerleave', onPointerLeave);
+  window.addEventListener('click', onClick);
+
+  // Attach touch listeners to the canvas element with passive:true
+  // This means the browser is free to scroll — we just observe the position.
+  elem.addEventListener('touchstart',  onTouchStart,  { passive: true });
+  elem.addEventListener('touchmove',   onTouchMove,   { passive: true });
+  elem.addEventListener('touchend',    onTouchEnd,    { passive: true });
+  elem.addEventListener('touchcancel', onTouchEnd,    { passive: true });
+
+  state.dispose = () => {
+    window.removeEventListener('pointermove', onPointerMove);
+    window.removeEventListener('pointerleave', onPointerLeave);
+    window.removeEventListener('click', onClick);
+    elem.removeEventListener('touchstart',  onTouchStart);
+    elem.removeEventListener('touchmove',   onTouchMove);
+    elem.removeEventListener('touchend',    onTouchEnd);
+    elem.removeEventListener('touchcancel', onTouchEnd);
   };
-  return t;
+
+  return state;
 }
 
-function M(e) {
-  A.x = e.clientX;
-  A.y = e.clientY;
-  processInteraction();
-}
-
-function processInteraction() {
-  for (const [elem, t] of b) {
-    const i = elem.getBoundingClientRect();
-    if (D(i)) {
-      P(t, i);
-      if (!t.hover) {
-        t.hover = true;
-        t.onEnter(t);
-      }
-      t.onMove(t);
-    } else if (t.hover && !t.touching) {
-      t.hover = false;
-      t.onLeave(t);
-    }
-  }
-}
-
-function C(e) {
-  A.x = e.clientX;
-  A.y = e.clientY;
-  for (const [elem, t] of b) {
-    const i = elem.getBoundingClientRect();
-    P(t, i);
-    if (D(i)) t.onClick(t);
-  }
-}
-
-function L() {
-  for (const t of b.values()) {
-    if (t.hover) {
-      t.hover = false;
-      t.onLeave(t);
-    }
-  }
-}
-
-function TouchStart(e) {
-  if (e.touches.length > 0) {
-    e.preventDefault();
-    A.x = e.touches[0].clientX;
-    A.y = e.touches[0].clientY;
-
-    for (const [elem, t] of b) {
-      const rect = elem.getBoundingClientRect();
-      if (D(rect)) {
-        t.touching = true;
-        P(t, rect);
-        if (!t.hover) {
-          t.hover = true;
-          t.onEnter(t);
-        }
-        t.onMove(t);
-      }
-    }
-  }
-}
-
-function TouchMove(e) {
-  if (!R) return; // mobile scroll free
-
-  if (e.touches.length > 0) {
-    A.x = e.touches[0].clientX;
-    A.y = e.touches[0].clientY;
-  }
-}
-
-function TouchEnd() {
-  for (const [, t] of b) {
-    if (t.touching) {
-      t.touching = false;
-      if (t.hover) {
-        t.hover = false;
-        t.onLeave(t);
-      }
-    }
-  }
-}
-
-function P(e, t) {
-  const { position: i, nPosition: s } = e;
-  i.x = A.x - t.left;
-  i.y = A.y - t.top;
-  s.x = (i.x / t.width) * 2 - 1;
-  s.y = (-i.y / t.height) * 2 + 1;
-}
-function D(e) {
-  const { x: t, y: i } = A;
-  const { left: s, top: n, width: o, height: r } = e;
-  return t >= s && t <= s + o && i >= n && i <= n + r;
-}
+// ─────────────────────────────────────────────────────────────────────────────
 
 const { randFloat: k, randFloatSpread: E } = o;
 const F = new a();
@@ -453,9 +446,7 @@ class W {
         const sumRadius = radius + otherRadius;
         if (dist < sumRadius) {
           const overlap = sumRadius - dist;
-          j.copy(_)
-            .normalize()
-            .multiplyScalar(0.5 * overlap);
+          j.copy(_).normalize().multiplyScalar(0.5 * overlap);
           H.copy(j).multiplyScalar(Math.max(B.length(), 1));
           T.copy(j).multiplyScalar(Math.max(N.length(), 1));
           I.sub(j);
@@ -534,7 +525,7 @@ class Y extends c {
   }
 }
 
-const X = {
+const defaultConfig = {
   count: 200,
   colors: [0, 0, 0],
   ambientColor: 16777215,
@@ -560,176 +551,187 @@ const X = {
   followCursor: true
 };
 
-const U = new m();
+const dummyObj = new m();
 
-class Z extends d {
-  constructor(e, t = {}) {
-    const i = { ...X, ...t };
-    const s = new z();
-    const n = new p(e, 0.04).fromScene(s).texture;
-    const o = new g();
-    const r = new Y({ envMap: n, ...i.materialParams });
-    r.envMapRotation.x = -Math.PI / 2;
-    super(o, r, i.count);
-    this.config = i;
-    this.physics = new W(i);
-    this.#S();
-    this.setColors(i.colors);
+class BallpitMesh extends d {
+  constructor(renderer, opts = {}) {
+    const cfg = { ...defaultConfig, ...opts };
+    const env = new z();
+    const envTexture = new p(renderer, 0.04).fromScene(env).texture;
+    const geo = new g();
+    const mat = new Y({ envMap: envTexture, ...cfg.materialParams });
+    mat.envMapRotation.x = -Math.PI / 2;
+    super(geo, mat, cfg.count);
+    this.config = cfg;
+    this.physics = new W(cfg);
+    this._setupLights();
+    this.setColors(cfg.colors);
   }
-  #S() {
+  _setupLights() {
     this.ambientLight = new f(this.config.ambientColor, this.config.ambientIntensity);
     this.add(this.ambientLight);
     this.light = new u(this.config.colors[0], this.config.lightIntensity);
     this.add(this.light);
   }
-  setColors(e) {
-    if (Array.isArray(e) && e.length > 1) {
-      const t = (function (e) {
-        let t, i;
-        function setColors(e) {
-          t = e;
-          i = [];
-          t.forEach(col => {
-            i.push(new l(col));
-          });
+  setColors(colors) {
+    if (Array.isArray(colors) && colors.length > 1) {
+      const palette = (() => {
+        let stops, colorObjs;
+        function set(arr) {
+          stops = arr;
+          colorObjs = arr.map(c => new l(c));
         }
-        setColors(e);
+        set(colors);
         return {
-          setColors,
-          getColorAt: function (ratio, out = new l()) {
-            const scaled = Math.max(0, Math.min(1, ratio)) * (t.length - 1);
+          set,
+          getAt(ratio, out = new l()) {
+            const scaled = Math.max(0, Math.min(1, ratio)) * (stops.length - 1);
             const idx = Math.floor(scaled);
-            const start = i[idx];
-            if (idx >= t.length - 1) return start.clone();
+            const start = colorObjs[idx];
+            if (idx >= stops.length - 1) return start.clone();
             const alpha = scaled - idx;
-            const end = i[idx + 1];
+            const end = colorObjs[idx + 1];
             out.r = start.r + alpha * (end.r - start.r);
             out.g = start.g + alpha * (end.g - start.g);
             out.b = start.b + alpha * (end.b - start.b);
             return out;
           }
         };
-      })(e);
-      for (let idx = 0; idx < this.count; idx++) {
-        this.setColorAt(idx, t.getColorAt(idx / this.count));
-        if (idx === 0) {
-          this.light.color.copy(t.getColorAt(idx / this.count));
-        }
+      })();
+      for (let i = 0; i < this.count; i++) {
+        this.setColorAt(i, palette.getAt(i / this.count));
+        if (i === 0) this.light.color.copy(palette.getAt(0));
       }
       this.instanceColor.needsUpdate = true;
     }
   }
-  update(e) {
-    this.physics.update(e);
-    for (let idx = 0; idx < this.count; idx++) {
-      U.position.fromArray(this.physics.positionData, 3 * idx);
-      if (idx === 0 && this.config.followCursor === false) {
-        U.scale.setScalar(0);
+  update(frame) {
+    this.physics.update(frame);
+    for (let i = 0; i < this.count; i++) {
+      dummyObj.position.fromArray(this.physics.positionData, 3 * i);
+      if (i === 0 && !this.config.followCursor) {
+        dummyObj.scale.setScalar(0);
       } else {
-        U.scale.setScalar(this.physics.sizeData[idx]);
+        dummyObj.scale.setScalar(this.physics.sizeData[i]);
       }
-      U.updateMatrix();
-      this.setMatrixAt(idx, U.matrix);
-      if (idx === 0) this.light.position.copy(U.position);
+      dummyObj.updateMatrix();
+      this.setMatrixAt(i, dummyObj.matrix);
+      if (i === 0) this.light.position.copy(dummyObj.position);
     }
     this.instanceMatrix.needsUpdate = true;
   }
 }
 
-function createBallpit(e, t = {}) {
-  const i = new x({
-    canvas: e,
+function createBallpit(canvas, opts = {}) {
+  const three = new x({
+    canvas,
     size: 'parent',
     rendererOptions: { antialias: true, alpha: true }
   });
-  let s;
-  i.renderer.toneMapping = v;
-  i.camera.position.set(0, 0, 20);
-  i.camera.lookAt(0, 0, 0);
-  i.cameraMaxAspect = 1.5;
-  i.resize();
-  initialize(t);
-  const n = new y();
-  const o = new w(new a(0, 0, 1), 0);
-  const r = new a();
-  let c = false;
 
-  // mobile scroll fix
-if (t.followCursor) {
-  e.style.touchAction = 'none';   // desktop interaction
-} else {
-  e.style.touchAction = 'pan-y';  // mobile scroll allow
-}
+  let spheres;
+  let paused = false;
 
-e.style.userSelect = 'none';
-e.style.webkitUserSelect = 'none';
+  three.renderer.toneMapping = v;
+  three.camera.position.set(0, 0, 20);
+  three.camera.lookAt(0, 0, 0);
+  three.cameraMaxAspect = 1.5;
+  three.resize();
 
+  function initialize(config) {
+    if (spheres) {
+      three.clear();
+      three.scene.remove(spheres);
+    }
+    spheres = new BallpitMesh(three.renderer, config);
+    three.scene.add(spheres);
+  }
 
-  const h = S({
-    domElement: e,
+  initialize(opts);
+
+  const raycaster = new y();
+  const plane = new w(new a(0, 0, 1), 0);
+  const intersection = new a();
+
+  // ── FIXED: use our new pointer handler (passive touch, no scroll blocking) ──
+  // Also remove `touchAction: 'none'` — this was the main culprit on mobile.
+  canvas.style.userSelect = 'none';
+  canvas.style.webkitUserSelect = 'none';
+  // DO NOT set touchAction:'none' here — that blocks browser scroll!
+
+  const pointer = createPointerHandler({
+    domElement: canvas,
     onMove() {
-      n.setFromCamera(h.nPosition, i.camera);
-      i.camera.getWorldDirection(o.normal);
-      n.ray.intersectPlane(o, r);
-      s.physics.center.copy(r);
-      s.config.controlSphere0 = true;
+      raycaster.setFromCamera(pointer.nPosition, three.camera);
+      three.camera.getWorldDirection(plane.normal);
+      raycaster.ray.intersectPlane(plane, intersection);
+      spheres.physics.center.copy(intersection);
+      spheres.config.controlSphere0 = true;
     },
     onLeave() {
-      s.config.controlSphere0 = false;
+      spheres.config.controlSphere0 = false;
     }
   });
-  function initialize(e) {
-    if (s) {
-      i.clear();
-      i.scene.remove(s);
-    }
-    s = new Z(i.renderer, e);
-    i.scene.add(s);
-  }
-  i.onBeforeRender = e => {
-    if (!c) s.update(e);
+
+  three.onBeforeRender = frame => {
+    if (!paused) spheres.update(frame);
   };
-  i.onAfterResize = e => {
-    s.config.maxX = e.wWidth / 2;
-    s.config.maxY = e.wHeight / 2;
+
+  three.onAfterResize = size => {
+    spheres.config.maxX = size.wWidth / 2;
+    spheres.config.maxY = size.wHeight / 2;
   };
+
   return {
-    three: i,
-    get spheres() {
-      return s;
-    },
-    setCount(e) {
-      initialize({ ...s.config, count: e });
-    },
-    togglePause() {
-      c = !c;
-    },
+    three,
+    get spheres() { return spheres; },
+    setCount(n) { initialize({ ...spheres.config, count: n }); },
+    togglePause() { paused = !paused; },
     dispose() {
-      h.dispose();
-      i.dispose();
+      pointer.dispose();
+      three.dispose();
     }
   };
 }
 
+// ─── React Component ──────────────────────────────────────────────────────────
+/**
+ * Ballpit — fully responsive, mobile-friendly Three.js balls simulation.
+ *
+ * Usage:
+ *   <Ballpit count={100} gravity={0.5} colors={["#5227FF","#7cff67"]} followCursor />
+ *
+ * The wrapper div controls the size — just set width/height on it.
+ * On mobile, page scrolling is NOT blocked. Touch drag still moves the
+ * attractor sphere, giving a nice interactive feel without breaking UX.
+ */
 const Ballpit = ({ className = '', followCursor = true, ...props }) => {
   const canvasRef = useRef(null);
-  const spheresInstanceRef = useRef(null);
+  const instanceRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
-    spheresInstanceRef.current = createBallpit(canvas, { followCursor, ...props });
-
+    instanceRef.current = createBallpit(canvas, { followCursor, ...props });
     return () => {
-      if (spheresInstanceRef.current) {
-        spheresInstanceRef.current.dispose();
-      }
+      instanceRef.current?.dispose();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <canvas className={`${className} w-full h-full`} ref={canvasRef} />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className={className}
+      style={{
+        display: 'block',
+        width: '100%',
+        height: '100%',
+        // touchAction must NOT be 'none' — let the browser handle scrolling
+        touchAction: 'auto',
+      }}
+    />
+  );
 };
 
 export default Ballpit;

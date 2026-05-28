@@ -36,20 +36,20 @@ export default function Careers() {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
-            <div className="text-4xl mb-4 text-primary-light"><FaRocket /></div>
+          <div className="bg-white rounded-xl p-6 border-l-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
+            <div className="text-4xl mb-4 text-primary-light text-accent"><FaRocket /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Innovative Projects</h3>
             <p className="text-text-muted">Work on cutting-edge technology projects that make a real impact.</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
-            <div className="text-4xl mb-4 text-primary-light"><FaUsers /></div>
+          <div className="bg-white rounded-xl p-6 border-l-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
+            <div className="text-4xl mb-4 text-primary-light text-accent"><FaUsers /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Great Team</h3>
             <p className="text-text-muted">Collaborate with talented professionals in a supportive environment.</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
-            <div className="text-4xl mb-4 text-primary-light"><FaChartLine /></div>
+          <div className="bg-white rounded-xl p-6 border-l-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
+            <div className="text-4xl mb-4 text-primary-light text-accent"><FaChartLine /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Growth Opportunities</h3>
             <p className="text-text-muted">Continuous learning and career development opportunities.</p>
           </div>
@@ -65,7 +65,7 @@ export default function Careers() {
   </h2>
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     {/* Web Developer - Kept as requested */}
-    <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300">
+    <div className="bg-white rounded-xl p-6 border-l-3 border-r-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300">
       <h3 className="text-xl font-semibold text-primary mb-2 flex items-center">
         <FaBriefcase className="mr-2 text-accent" /> Web Developer
       </h3>
@@ -77,7 +77,7 @@ export default function Careers() {
     </div>
 
     {/* App Developer - Kept as requested */}
-    <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300">
+    <div className="bg-white rounded-xl p-6 border-l-3 border-r-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300">
       <h3 className="text-xl font-semibold text-primary mb-2 flex items-center">
         <FaBriefcase className="mr-2 text-accent" /> App Developer
       </h3>
@@ -89,7 +89,7 @@ export default function Careers() {
     </div>
 
     {/* Sales Executive - Updated */}
-    <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300">
+    <div className="bg-white rounded-xl p-6 border-l-3 border-r-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300">
       <h3 className="text-xl font-semibold text-primary mb-2 flex items-center">
         <FaChartLine className="mr-2 text-accent" /> Sales Executive
       </h3>
@@ -101,7 +101,7 @@ export default function Careers() {
     </div>
 
     {/* Internship - Updated */}
-    <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300">
+    <div className="bg-white rounded-xl p-6 border-l-3 border-r-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300">
       <h3 className="text-xl font-semibold text-primary mb-2 flex items-center">
         <FaUserGraduate className="mr-2 text-accent" />Internship for Students and Freshers
       </h3>
@@ -121,28 +121,28 @@ export default function Careers() {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-background-light">
+          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-t-3 border-b-3 border-accent border-background-light">
             <h3 className="text-2xl font-bold text-primary mb-4">Join Our Team</h3>
             <p className="text-text-secondary mb-6">
               Fill out the form below and we'll review your application. We're always looking for talented individuals to join our growing team.
             </p>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <FaBriefcase className="text-primary-light mt-1" />
+                <FaBriefcase className="text-primary-light mt-1 text-accent" />
                 <div>
                   <p className="text-text-muted font-medium">Open Positions</p>
                   <p className="text-text-secondary">Web Developer, App Developer, Digital Marketer, SEO Specialist</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <FaRocket className="text-primary-light mt-1" />
+                <FaRocket className="text-primary-light mt-1 text-accent" />
                 <div>
                   <p className="text-text-muted font-medium">Work Environment</p>
                   <p className="text-text-secondary">Innovative, collaborative, and growth-focused</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <FaUsers className="text-primary-light mt-1" />
+                <FaUsers className="text-primary-light mt-1 text-accent" />
                 <div>
                   <p className="text-text-muted font-medium">Team Size</p>
                   <p className="text-text-secondary">Growing team of 20+ professionals</p>
@@ -151,7 +151,7 @@ export default function Careers() {
             </div>
             <div className="mt-6 p-4 bg-background-light rounded-lg">
               <p className="text-text-secondary text-sm">
-                <strong>Note:</strong> Please specify your desired position in the application form.
+                <strong className='text-blue-600'>Note:</strong> Please specify your desired position in the application form.
               </p>
             </div>
           </div>

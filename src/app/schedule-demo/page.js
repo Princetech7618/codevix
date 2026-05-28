@@ -32,7 +32,7 @@ export default function ScheduleDemo() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
         {/* Demo Info */}
-        <div className="animate-on-scroll bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-background-light">
+        <div className="animate-on-scroll bg-white rounded-2xl p-6 md:p-8 shadow-lg border-t-3 border-b-3 border-accent border-background-light">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Why Schedule a Demo?</h2>
           <p className="text-text-secondary mb-8">
             A demo is the best way to understand how our solutions can address your specific business challenges. Here's what you'll experience:
@@ -41,7 +41,7 @@ export default function ScheduleDemo() {
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-background-light rounded-full flex items-center justify-center flex-shrink-0">
-                <FaRocket className="text-primary-light text-xl" />
+                <FaRocket className="text-primary-light text-xl text-accent" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">Live Product Walkthrough</h3>
@@ -51,7 +51,7 @@ export default function ScheduleDemo() {
             
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-background-light rounded-full flex items-center justify-center flex-shrink-0">
-                <FaLaptop className="text-primary-light text-xl" />
+                <FaLaptop className="text-primary-light text-xl text-accent" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">Interactive Q&A</h3>
@@ -61,7 +61,7 @@ export default function ScheduleDemo() {
             
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-background-light rounded-full flex items-center justify-center flex-shrink-0">
-                <FaCloud className="text-primary-light text-xl" />
+                <FaCloud className="text-primary-light text-xl text-accent" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">Customized Solutions</h3>
@@ -71,7 +71,7 @@ export default function ScheduleDemo() {
             
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-background-light rounded-full flex items-center justify-center flex-shrink-0">
-                <FaCalendarAlt className="text-primary-light text-xl" />
+                <FaCalendarAlt className="text-primary-light text-xl text-accent" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">Flexible Scheduling</h3>
@@ -82,7 +82,7 @@ export default function ScheduleDemo() {
 
           <div className="mt-8 p-4 bg-background-light rounded-lg">
             <p className="text-text-secondary text-sm">
-              <strong>Note:</strong> Demos typically last 30-60 minutes and can be conducted online or in-person (depending on location).
+              <strong className='text-blue-600'>Note:</strong> Demos typically last 30-60 minutes and can be conducted online or in-person (depending on location).
             </p>
           </div>
         </div>
@@ -98,37 +98,37 @@ export default function ScheduleDemo() {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-r-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
             <div className="text-3xl mb-3 text-accent"><FaHospital /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Hospital Management</h3>
             <p className="text-text-muted">Complete hospital operations system</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-r-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
             <div className="text-3xl mb-3 text-accent"><FaSchool /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">School Management</h3>
             <p className="text-text-muted">Educational institution administration</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-r-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
             <div className="text-3xl mb-3 text-accent"><FaLaptop /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Custom Software</h3>
             <p className="text-text-muted">Tailored business solutions</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-r-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
             <div className="text-3xl mb-3 text-accent"><FaCloud /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Cloud Solutions</h3>
             <p className="text-text-muted">Scalable cloud infrastructure</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-r-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
             <div className="text-3xl mb-3 text-accent"><FaRocket /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Digital Marketing</h3>
             <p className="text-text-muted">Complete marketing strategies</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
+          <div className="bg-white rounded-xl p-6 border-l-3 border-r-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300 text-center">
             <div className="text-3xl mb-3 text-accent"><FaCalendarAlt /></div>
             <h3 className="text-xl font-semibold text-primary mb-2">Task Management</h3>
             <p className="text-text-muted">Team collaboration tools</p>

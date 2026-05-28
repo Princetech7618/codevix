@@ -313,7 +313,7 @@ export default function Header() {
                 href="tel:+918810338523" 
                 className="flex items-center text-base text-gray-600 hover:text-primary transition-colors"
               >
-                <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mr-4">
+                <div className="w-10 h-10 rounded-full bg-sky-50 flex items-center justify-center mr-4">
                   <FaPhone className="text-secondary" />
                 </div>
                 +91 8810338523

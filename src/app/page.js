@@ -1,7 +1,7 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 
 import Link from "next/link";
-// import Hero from "@/components/Hero";
+import Hero from "@/components/Hero";
 import Crmcard from "@/components/Crmcard";
 import {
   FaRocket,
@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-background-light via-background-gradient to-accent pt-24 pb-20 md:pt-32 md:pb-24 text-center px-4">
+      {/* <div className="bg-gradient-to-br from-background-light via-background-gradient to-accent pt-24 pb-20 md:pt-32 md:pb-24 text-center px-4">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block bg-gradient-to-r from-primary-light to-accent text-white px-8 py-3 rounded-full text-sm font-semibold mb-8 animate-pulse-slow shadow-lg">
             <FaRocket className="inline mr-2" /> Your Technology Partner
@@ -61,7 +61,7 @@ export default function Home() {
           </div>
 
           <p className="text-2xl md:text-3xl text-text-secondary font-medium tracking-wide mb-8">
-            INNOVATE • TRANSFORM • SUCCEED
+            INNOVATE â€¢ TRANSFORM â€¢ SUCCEED
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
@@ -79,12 +79,12 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </div>
-{/* <Hero /> */}
+      </div> */}
+<Hero />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Introduction Section */}
 
-<div className="bg-white rounded-3xl p-8 md:p-12 mb-12 border-l-[6px] border-[#78d56f] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 animate-on-scroll group">       <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">
+<div className="bg-white rounded-3xl p-8 md:p-12 mb-12 border-l-[3px] border-[#38bdf8] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 animate-on-scroll group">       <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">
             Building Digital Excellence
           </h2>
           <p className="text-text-secondary text-lg leading-relaxed mb-4">
@@ -125,15 +125,15 @@ export default function Home() {
     <div key={index} className="group relative bg-white rounded-3xl p-8 text-center border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-on-scroll overflow-hidden">
       
       {/* Background Decorative Gradient (Expensive Look) */}
-      <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#78d56f]/10 rounded-full group-hover:scale-[3] transition-transform duration-700 ease-in-out"></div>
+      <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#38bdf8]/10 rounded-full group-hover:scale-[3] transition-transform duration-700 ease-in-out"></div>
       
       {/* Icon Wrapper */}
-      <div className="relative z-10 w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-gray-50 text-[#78d56f] text-4xl group-hover:bg-[#78d56f] group-hover:text-white transition-all duration-300 shadow-inner">
+      <div className="relative z-10 w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-gray-50 text-[#38bdf8] text-4xl group-hover:bg-[#38bdf8] group-hover:text-white transition-all duration-300 shadow-inner">
         {service.icon}
       </div>
 
       {/* Content */}
-      <h3 className="relative z-10 text-xl font-bold text-gray-800 mb-4 group-hover:text-[#78d56f] transition-colors duration-300">
+      <h3 className="relative z-10 text-xl font-bold text-gray-800 mb-4 group-hover:text-[#38bdf8] transition-colors duration-300">
         {service.title}
       </h3>
       
@@ -142,7 +142,7 @@ export default function Home() {
       </p>
 
       {/* Bottom Accent Line */}
-      <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#78d56f] group-hover:w-full transition-all duration-500"></div>
+      <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#38bdf8] group-hover:w-full transition-all duration-500"></div>
     </div>
   ))}
 </div>
@@ -177,7 +177,7 @@ export default function Home() {
                 />
                 {/* Floating Badge */}
                 <div className="absolute top-4 right-4 bg-accent text-white px-4 py-2 rounded-xl font-bold shadow-lg animate-bounce">
-                  Free Installation 🚀
+                  Free Installation ðŸš€
                 </div>
               </div>
 
@@ -234,9 +234,9 @@ export default function Home() {
                 <div className="pt-6 border-t border-light-100">
                   <div className="flex items-center space-x-4 mb-6">
                     <span className="text-2xl font-black text-primary">
-                      ₹25,000
+                      â‚¹25,000
                     </span>
-                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-xs font-bold uppercase">
+                    <span className="bg-sky-100 text-sky-700 px-3 py-1 rounded-lg text-xs font-bold uppercase">
                       Limited Time Offer
                     </span>
                   </div>
@@ -297,7 +297,7 @@ export default function Home() {
 
       {/* Security & Mapping Card */}
       <div className="bg-white p-7 rounded-3xl shadow-md border-b-4 border-accent hover:shadow-xl transition-all">
-        <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-accent mb-5 text-xl">
+        <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center text-accent mb-5 text-xl">
           <FaLock />
         </div>
         <h3 className="text-xl font-bold text-primary mb-4">Setup & Security</h3>
@@ -318,15 +318,15 @@ export default function Home() {
         <div className="space-y-5">
           <div className="border-b border-white/20 pb-3">
             <p className="text-white/80 text-xs uppercase font-bold tracking-tight">Backend Project</p>
-            <p className="text-2xl font-black">₹2,000 <span className="text-xs font-normal opacity-80">/setup</span></p>
+            <p className="text-2xl font-black">â‚¹2,000 <span className="text-xs font-normal opacity-80">/setup</span></p>
           </div>
           <div className="border-b border-white/20 pb-3">
             <p className="text-white/80 text-xs uppercase font-bold tracking-tight">Frontend Project</p>
-            <p className="text-2xl font-black">₹1,000 <span className="text-xs font-normal opacity-80">/setup</span></p>
+            <p className="text-2xl font-black">â‚¹1,000 <span className="text-xs font-normal opacity-80">/setup</span></p>
           </div>
           <p className="text-xs italic font-medium opacity-90">Includes free customer support for your peace of mind.</p>
           <Link href="/contact" className="block w-full bg-accent text-white text-center py-3.5 rounded-xl font-bold shadow-md hover:bg-white hover:text-primary transition-all text-sm uppercase tracking-wide">
-            Deploy Now 🚀
+            Deploy Now ðŸš€
           </Link>
         </div>
       </div>
@@ -344,7 +344,7 @@ export default function Home() {
         {/* Left Side: Offer Image & Badge */}
         <div className="p-8 md:p-12 relative group">
           <div className="absolute top-12 left-12 z-10 bg-accent text-white px-6 py-2 rounded-full font-black shadow-xl animate-pulse">
-            Super Saver Deal 🏷️
+            Super Saver Deal ðŸ·ï¸
           </div>
           <img 
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" 
@@ -390,11 +390,11 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
             <div className="text-center sm:text-left">
               <p className="text-muted text-[10px] font-bold uppercase tracking-widest mb-1">Starting At Only</p>
-              <p className="text-3xl font-black text-primary tracking-tighter">₹2,499</p>
+              <p className="text-3xl font-black text-primary tracking-tighter">â‚¹2,499</p>
             </div>
             <div className="h-16 w-px bg-light-100 hidden sm:block"></div>
             <div className="bg-linear-to-r from-accent/20 to-transparent p-4 rounded-2xl border-l-4 border-accent">
-              <p className="text-primary font-bold text-sm">🎁 Bonus Offer:</p>
+              <p className="text-primary font-bold text-sm">ðŸŽ Bonus Offer:</p>
               <p className="text-muted text-xs leading-tight font-medium">1-Month **FREE Hosting** on our premium server with your domain mapping.</p>
             </div>
           </div>
@@ -495,7 +495,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Innovation First */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#38bdf8] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
                 <FaLightbulb className="mr-2 text-accent" /> Innovation
                 First
@@ -507,7 +507,7 @@ export default function Home() {
             </div>
 
             {/* Client-Focused Approach */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#38bdf8] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
                 <FaUserCheck className="mr-2 text-accent" /> Client-Focused
                 Approach
@@ -519,7 +519,7 @@ export default function Home() {
             </div>
 
             {/* Fast Delivery */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#38bdf8] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
                 <FaBolt className="mr-2 text-accent" /> Fast Delivery
               </h4>
@@ -530,7 +530,7 @@ export default function Home() {
             </div>
 
             {/* Reliable & Secure */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#38bdf8] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
                 <FaLock className="mr-2 text-accent" /> Reliable & Secure
               </h4>
@@ -541,7 +541,7 @@ export default function Home() {
             </div>
 
             {/* Competitive Pricing */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#38bdf8] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
                 <FaDollarSign className="mr-2 text-accent" /> Competitive
                 Pricing
@@ -553,7 +553,7 @@ export default function Home() {
             </div>
 
             {/* Full Support */}
-            <div className="bg-white rounded-xl p-6 border-l-4 border-[#78d56f] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-[#38bdf8] shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary mb-3 flex items-center">
                 <FaHeadset className="mr-2 text-accent" /> Full Support
               </h4>
@@ -618,7 +618,7 @@ export default function Home() {
 
           {/* DevOps Card */}
           <div className="flex-shrink-0 w-[300px] bg-white p-10 rounded-[32px] shadow-md border border-light-100 flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl">
-            <div className="mb-6 text-4xl text-green-500">
+            <div className="mb-6 text-4xl text-sky-500">
               <FaInfinity />
             </div>
             <h3 className="text-lg font-bold text-primary tracking-tight">DevOps Architecture</h3>
@@ -662,3 +662,5 @@ export default function Home() {
     </>
   );
 }
+
+

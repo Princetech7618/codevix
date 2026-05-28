@@ -31,7 +31,7 @@ export default function Contact() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
         {/* Contact Info */}
-        <div className="animate-on-scroll bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-background-light">
+        <div className="animate-on-scroll bg-white rounded-2xl p-6 md:p-8 shadow-lg border-b-3 border-t-3 border-accent border-background-light">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Get In Touch</h2>
           <p className="text-text-secondary mb-8">
             We'd love to hear from you. Reach out to us through any of the following channels:
@@ -40,7 +40,7 @@ export default function Contact() {
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-background-light rounded-full flex items-center justify-center flex-shrink-0">
-                <FaPhone className="text-primary-light text-xl" />
+                <FaPhone className="text-primary-light text-xl text-accent" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">Phone</h3>
@@ -52,7 +52,7 @@ export default function Contact() {
             
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-background-light rounded-full flex items-center justify-center flex-shrink-0">
-                <FaEnvelope className="text-primary-light text-xl" />
+                <FaEnvelope className="text-primary-light text-xl text-accent" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">Email</h3>
@@ -64,7 +64,7 @@ export default function Contact() {
             
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-background-light rounded-full flex items-center justify-center flex-shrink-0">
-                <FaGlobe className="text-primary-light text-xl" />
+                <FaGlobe className="text-primary-light text-xl text-accent" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">Website</h3>
@@ -76,7 +76,7 @@ export default function Contact() {
             
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-background-light rounded-full flex items-center justify-center flex-shrink-0">
-                <FaMapMarkerAlt className="text-primary-light text-xl" />
+                <FaMapMarkerAlt className="text-primary-light text-xl text-accent" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">Address</h3>
@@ -90,7 +90,7 @@ export default function Contact() {
               href="https://instagram.com/softnexis" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-background-light border-2 border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
+              className="w-11 h-11 rounded-full bg-background-light text-accent  border-3 border-accent border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
               title="Instagram"
             >
               <FaInstagram size={18} />
@@ -99,7 +99,7 @@ export default function Contact() {
               href="https://linkedin.com/company/softnexis-gentech" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-background-light border-2 border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
+              className="w-11 h-11 rounded-full bg-background-light text-accent border-3 border-accent border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
               title="LinkedIn"
             >
               <FaLinkedin size={18} />
@@ -108,7 +108,7 @@ export default function Contact() {
               href="https://facebook.com/softnexis" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-background-light border-2 border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
+              className="w-11 h-11 rounded-full bg-background-light text-accent border-3 border-accent border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
               title="Facebook"
             >
               <FaFacebook size={18} />
@@ -117,7 +117,7 @@ export default function Contact() {
               href="https://twitter.com/softnexis" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-background-light border-2 border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
+              className="w-11 h-11 rounded-full bg-background-light border-3 border-accent text-accent border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
               title="Twitter"
             >
               <FaTwitter size={18} />
@@ -136,7 +136,7 @@ export default function Contact() {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-xl p-6 border-r-3 border-l-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300">
             <h3 className="text-xl font-semibold text-primary mb-3 flex items-center">
               <FaEnvelope className="mr-2 text-primary-light" /> What industries do you serve?
             </h3>
@@ -145,7 +145,7 @@ export default function Contact() {
             </p>
           </div>
           
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-xl p-6 border-r-3 border-l-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300">
             <h3 className="text-xl font-semibold text-primary mb-3 flex items-center">
               <FaEnvelope className="mr-2 text-primary-light" /> How long does a typical project take?
             </h3>
@@ -154,7 +154,7 @@ export default function Contact() {
             </p>
           </div>
           
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-xl p-6 border-r-3 border-l-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300">
             <h3 className="text-xl font-semibold text-primary mb-3 flex items-center">
               <FaEnvelope className="mr-2 text-primary-light" /> Do you provide ongoing support?
             </h3>
@@ -163,7 +163,7 @@ export default function Contact() {
             </p>
           </div>
           
-          <div className="bg-white rounded-xl p-6 border-2 border-background-light shadow-md hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-xl p-6 border-r-3 border-l-3 border-accent border-background-light shadow-md hover:shadow-lg transition-all duration-300">
             <h3 className="text-xl font-semibold text-primary mb-3 flex items-center">
               <FaEnvelope className="mr-2 text-primary-light" /> What technologies do you use?
             </h3>

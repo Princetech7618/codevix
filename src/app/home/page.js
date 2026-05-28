@@ -1,4 +1,4 @@
-// import { Metadata } from 'next';
+﻿// import { Metadata } from 'next';
 // import { 
 //   FaRocket, 
 //   FaGlobe, 
@@ -52,7 +52,7 @@
 //           </div>
           
 //           <p className="text-2xl md:text-3xl text-text-secondary font-medium tracking-wide mb-8">
-//             INNOVATE • TRANSFORM • SUCCEED
+//             INNOVATE â€¢ TRANSFORM â€¢ SUCCEED
 //           </p>
           
 //           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
@@ -165,7 +165,7 @@
 //             {/* Hospital Management */}
 //             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
 //               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-//                 <FaHospital className="mr-2 text-green-500" /> Hospital Management System
+//                 <FaHospital className="mr-2 text-sky-500" /> Hospital Management System
 //               </h4>
 //               <p className="text-text-muted">Complete hospital operations - patient records, appointments, billing, inventory, and staff management.</p>
 //             </div>
@@ -173,7 +173,7 @@
 //             {/* School Management */}
 //             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
 //               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-//                 <FaSchool className="mr-2 text-green-500" /> School Management System
+//                 <FaSchool className="mr-2 text-sky-500" /> School Management System
 //               </h4>
 //               <p className="text-text-muted">Student admissions, attendance, grades, fee management, and parent-teacher communication portal.</p>
 //             </div>
@@ -181,7 +181,7 @@
 //             {/* Travel CRM */}
 //             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
 //               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-//                 <FaPlane className="mr-2 text-green-500" /> Travel CRM
+//                 <FaPlane className="mr-2 text-sky-500" /> Travel CRM
 //               </h4>
 //               <p className="text-text-gray">Booking management, itinerary planning, customer management, and payment tracking for travel agencies.</p>
 //               <span className="inline-block bg-gradient-to-r from-accent to-primary-light text-white px-4 py-1 rounded-full text-sm font-semibold mt-3">
@@ -192,7 +192,7 @@
 //             {/* Real Estate CRM */}
 //             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
 //               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-//                 <FaBuilding className="mr-2 text-green-500" /> Real Estate CRM
+//                 <FaBuilding className="mr-2 text-sky-500" /> Real Estate CRM
 //               </h4>
 //               <p className="text-text-muted">Property listings, lead management, client database, document management, and sales tracking.</p>
 //             </div>
@@ -200,7 +200,7 @@
 //             {/* Inventory Management */}
 //             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
 //               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-//                 <FaBox className="mr-2 text-green-500" /> Inventory Management
+//                 <FaBox className="mr-2 text-sky-500" /> Inventory Management
 //               </h4>
 //               <p className="text-text-muted">Stock tracking, order management, supplier management, and real-time inventory reports.</p>
 //             </div>
@@ -208,7 +208,7 @@
 //             {/* Task Manager */}
 //             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
 //               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-//                 <FaTasks className="mr-2 text-green-500" /> Task Manager
+//                 <FaTasks className="mr-2 text-sky-500" /> Task Manager
 //               </h4>
 //               <p className="text-text-muted">Project management, task assignment, team collaboration, and productivity tracking tools.</p>
 //             </div>
@@ -367,7 +367,7 @@ export default function Home() {
           </div>
           
           <p className="text-2xl md:text-3xl text-text-secondary font-medium tracking-wide mb-8">
-            INNOVATE • TRANSFORM • SUCCEED
+            INNOVATE â€¢ TRANSFORM â€¢ SUCCEED
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
@@ -480,7 +480,7 @@ export default function Home() {
             {/* Hospital Management */}
             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaHospital className="mr-2 text-green-500" /> Hospital Management System
+                <FaHospital className="mr-2 text-sky-500" /> Hospital Management System
               </h4>
               <p className="text-text-muted">Complete hospital operations - patient records, appointments, billing, inventory, and staff management.</p>
             </div>
@@ -488,7 +488,7 @@ export default function Home() {
             {/* School Management */}
             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaSchool className="mr-2 text-green-500" /> School Management System
+                <FaSchool className="mr-2 text-sky-500" /> School Management System
               </h4>
               <p className="text-text-muted">Student admissions, attendance, grades, fee management, and parent-teacher communication portal.</p>
             </div>
@@ -496,7 +496,7 @@ export default function Home() {
             {/* Travel CRM */}
             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaPlane className="mr-2 text-green-500" /> Travel CRM
+                <FaPlane className="mr-2 text-sky-500" /> Travel CRM
               </h4>
               <p className="text-text-gray">Booking management, itinerary planning, customer management, and payment tracking for travel agencies.</p>
               <span className="inline-block bg-gradient-to-r from-accent to-primary-light text-white px-4 py-1 rounded-full text-sm font-semibold mt-3">
@@ -507,7 +507,7 @@ export default function Home() {
             {/* Real Estate CRM */}
             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaBuilding className="mr-2 text-green-500" /> Real Estate CRM
+                <FaBuilding className="mr-2 text-sky-500" /> Real Estate CRM
               </h4>
               <p className="text-text-muted">Property listings, lead management, client database, document management, and sales tracking.</p>
             </div>
@@ -515,7 +515,7 @@ export default function Home() {
             {/* Inventory Management */}
             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaBox className="mr-2 text-green-500" /> Inventory Management
+                <FaBox className="mr-2 text-sky-500" /> Inventory Management
               </h4>
               <p className="text-text-muted">Stock tracking, order management, supplier management, and real-time inventory reports.</p>
             </div>
@@ -523,7 +523,7 @@ export default function Home() {
             {/* Task Manager */}
             <div className="bg-white rounded-xl p-6 border-2 border-background-gradient hover:border-accent hover:shadow-lg transition-all duration-300">
               <h4 className="text-xl font-semibold text-primary-light mb-3 flex items-center">
-                <FaTasks className="mr-2 text-green-500" /> Task Manager
+                <FaTasks className="mr-2 text-sky-500" /> Task Manager
               </h4>
               <p className="text-text-muted">Project management, task assignment, team collaboration, and productivity tracking tools.</p>
             </div>
@@ -551,7 +551,7 @@ export default function Home() {
                 className="w-full h-auto object-cover rounded-2xl"
               />
               <div className="absolute top-4 right-4 bg-accent text-white px-5 py-2 rounded-xl font-bold shadow-lg animate-bounce">
-                Free Installation 🚀
+                Free Installation ðŸš€
               </div>
             </div>
 
@@ -587,8 +587,8 @@ export default function Home() {
 
               <div className="pt-6 border-t border-background-light">
                 <div className="flex items-center space-x-4 mb-6">
-                  <span className="text-4xl font-black text-primary">₹25,000</span>
-                  <span className="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-xs font-bold uppercase">
+                  <span className="text-4xl font-black text-primary">â‚¹25,000</span>
+                  <span className="bg-sky-100 text-sky-700 px-3 py-1 rounded-lg text-xs font-bold uppercase">
                     All Inclusive
                   </span>
                 </div>
@@ -701,3 +701,4 @@ export default function Home() {
     </>
   );
 }
+

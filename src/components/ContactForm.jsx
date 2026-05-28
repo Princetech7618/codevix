@@ -51,7 +51,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-background-light">
+    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-t-3 border-b-3 border-accent border-background-light">
       <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Send Us a Message</h2>
       <p className="text-text-secondary mb-8">
         Fill out the form below and we'll get back to you within 24 hours.
@@ -70,7 +70,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Your Name"
-            className="w-full px-4 py-3 border-2 border-background-light rounded-lg form-input transition-all duration-300"
+            className="w-full px-4 py-3 border-b-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent border-background-light rounded-lg form-input transition-all duration-300"
           />
         </div>
         
@@ -86,7 +86,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             placeholder="your@email.com"
-            className="w-full px-4 py-3 border-2 border-background-light rounded-lg form-input transition-all duration-300"
+            className="w-full px-4 py-3 border-b-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent border-background-light rounded-lg form-input transition-all duration-300"
           />
         </div>
         
@@ -101,7 +101,7 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="+91 "
-            className="w-full px-4 py-3 border-2 border-background-light rounded-lg form-input transition-all duration-300"
+            className="w-full px-4 py-3 border-b-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent border-background-light rounded-lg form-input transition-all duration-300"
           />
         </div>
         
@@ -117,7 +117,7 @@ export default function ContactForm() {
             required
             rows="5"
             placeholder="Tell us about your project or inquiry..."
-            className="w-full px-4 py-3 border-2 border-background-light rounded-lg form-input transition-all duration-300 resize-y"
+            className="w-full px-4 py-3 border-b-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent border-background-light rounded-lg form-input transition-all duration-300 resize-y"
           ></textarea>
         </div>
         

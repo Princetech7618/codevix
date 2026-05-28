@@ -86,7 +86,7 @@ export default function Technologies() {
   return (
     <main className="bg-white">
       {/* Hero Header with SEO Optimized H1 */}
-      <section className="bg-linear-to-br from-light via-light-100 to-green-50 pt-20 pb-24 text-center px-6">
+      <section className="bg-linear-to-br from-light via-light-100 to-sky-50 pt-20 pb-24 text-center px-6">
         <div className="max-w-5xl mx-auto">
           <div className="inline-block bg-white/80 border border-secondary text-primary px-6 py-2 rounded-full font-bold text-sm mb-6 shadow-sm">
             <FaShieldAlt className="inline mr-2 text-accent" /> SECURE TECHNOLOGY EXPERTS
