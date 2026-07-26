@@ -4,7 +4,7 @@ import DemoForm from '@/components/DemoForm';
 
 export const metadata = {
   title: 'Schedule a Demo | Expert SaaS & Enterprise Software Solutions',
-  description: 'Book a live demonstration of Softnexis Gentech products. See our B2C Travel CRM, Hospital Management Systems, and E-commerce platforms in action. Let’s build your custom IT solution.',
+  description: 'Book a live demonstration of Codevix products. See our B2C Travel CRM, Hospital Management Systems, and E-commerce platforms in action. Let’s build your custom IT solution.',
   keywords: [
     'Schedule a Product Demo',
     'Live Software Demonstration',
@@ -12,7 +12,7 @@ export const metadata = {
     'Hospital Management System Walkthrough',
     'E-commerce Platform Demo',
     'Book a Technical Consultation',
-    'Custom SaaS Demo Softnexis',
+    'Custom SaaS Demo Codevix',
     'Java Spring Boot Project Demo',
     'Real-time Chat App Demonstration',
     'Enterprise ERP Demo India'
@@ -143,7 +143,7 @@ export default function ScheduleDemo() {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
         </h2>
         <p className="text-text-secondary text-xl mb-8">
-          Schedule your demo today and discover how Softnexis Gentech can transform your business.
+          Schedule your demo today and discover how Codevix can transform your business.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a 
@@ -153,7 +153,7 @@ export default function ScheduleDemo() {
             <FaPhone className="mr-2" /> Call Now: +91 8810338523
           </a>
           <a 
-            href="mailto:contact@softnexis.in" 
+            href="mailto:contact@codevix.com" 
             className="bg-white text-primary-light px-8 py-4 rounded-full font-semibold border-2 border-background-gradient hover:bg-background-light hover:border-primary-light hover:text-primary transition-all duration-300 flex items-center justify-center"
           >
             <FaEnvelope className="mr-2" /> Email Us

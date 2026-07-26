@@ -34,7 +34,7 @@
 //         {/* Main Title */}
 //         <div className="mb-6 sm:mb-8">
 //           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight sm:tracking-tight md:tracking-tighter leading-snug sm:leading-snug md:leading-tight mb-2 sm:mb-4">
-//             <span className="text-[#4fa8f7]">Softnexis</span>{" "}
+//             <span className="text-[#4fa8f7]">Codevix</span>{" "}
 //             <span className="bg-gradient-to-r from-[#4fa8f7] to-[#6fcf8c] bg-clip-text text-transparent">
 //               Gentech
 //             </span>
@@ -105,19 +105,16 @@ colors={["#38BDF8", "#38BDF8"]}
         {/* Floating Badge */}
         <div className="inline-flex items-center gap-2 bg-gradient-to-r to-[#38BDF8] backdrop-blur-xl border border-gray-200 text-white px-4 sm:px-6 lg:px-8 py-2 rounded-full text-xs sm:text-sm md:text-base font-bold mb-6 sm:mb-8 lg:mb-10 shadow-lg animate-bounce">
           <FaRocket className="text-[#38BDF8]" />
-          <span className="tracking-wide uppercase">Your Technology Partner</span>
+          <span className="tracking-wide uppercase">Your Digital Agency</span>
         </div>
 
         {/* Main Title */}
         <div className="mb-4 sm:mb-6 lg:mb-8">
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-snug md:leading-tight mb-2 sm:mb-4">
-            <span className="text-[#38BDF8]">Softnexis</span>{" "}
-            <span className="bg-gradient-to-r from-[#38BDF8] to-[#38BDF8] bg-clip-text text-transparent">
-              Gentech
-            </span>
+            <span className="text-[#38BDF8]">Codevix</span>
           </h1>
           <p className="text-sm sm:text-lg md:text-xl text-gray-600 font-semibold tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase">
-            Smart IT Solutions
+            Digital Growth Agency
           </p>
         </div>
 

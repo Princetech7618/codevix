@@ -1,25 +1,36 @@
-import { 
-  FaJava, FaPython, FaReact, FaNodeJs, FaPhp, FaLaravel, 
-  FaAws, FaDigitalOcean, FaDatabase, FaMobileAlt, FaDesktop, FaShieldAlt 
-} from 'react-icons/fa';
-import { 
-  SiSpringboot, SiDjango, SiFlask, SiNextdotjs, SiPostgresql, 
-  SiMysql, SiMongodb, SiFlutter, SiElectron, SiJavascript 
-} from 'react-icons/si';
+import { FaCode, FaShieldAlt } from 'react-icons/fa';
+
+const TechIcon = ({ children }) => (
+  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-sky-50 text-sky-500 text-3xl border border-sky-100">
+    {children}
+  </div>
+);
+
 
 // --- ADVANCED SEO METADATA ---
 export const metadata = {
-  title: 'Top Technology Stack | Java, Python, AWS & React Development - Softnexis',
-  description: 'Softnexis Gentech specializes in high-performance application development using Java, Spring Boot, Python, React, Next.js, and AWS. We build secure and scalable enterprise solutions.',
-  keywords: 'Java development, Spring Boot microservices, Python Django Flask, React JS experts, Next.js development company, AWS EC2 RDS deployment, PostgreSQL MySQL database management, Flutter mobile apps, Electron JS desktop apps, Softnexis technologies,Real-time Chat App WebSockets,Softnexis Gentech technologies,B2C Travel CRM technology',
+  title: 'Technology Stack | HTML, CSS, React, Tailwind, Next.js & Node.js - Codevix',
+  description:
+    'Codevix builds modern SEO-friendly websites and web apps using HTML, CSS, React, Tailwind, Next.js, and Node.js. Secure, scalable, performance-first delivery.',
+  keywords: [
+    'HTML development',
+    'CSS development',
+    'React development',
+    'Tailwind CSS',
+    'Next.js',
+    'Node.js',
+    'SEO friendly web development',
+    'digital marketing website',
+  ].join(', '),
   openGraph: {
-    title: 'Modern Technology Stack at Softnexis Gentech',
-    description: 'Building secure, scalable, and robust applications with modern technologies.',
-    url: 'https://softnexis.in/technologies',
-    siteName: 'Softnexis Gentech',
+    title: 'Modern Web Stack | React, Tailwind, Next.js & Node.js - Codevix',
+    description:
+      'Building fast, secure, and scalable web experiences with React, Next.js, Tailwind, and Node.js.',
+    url: 'https://codevix.com/technologies',
+    siteName: 'Codevix',
     images: [
       {
-        url: '/tech-banner.jpg', // Aap ye image public folder mein add kar sakte hain
+        url: '/tech-banner.jpg',
         width: 1200,
         height: 630,
       },
@@ -31,56 +42,30 @@ export const metadata = {
 
 export default function Technologies() {
   const techStack = [
-    {  
-      category: "Backend Development",
-      description: "We build robust and secure server-side architectures using industry-leading frameworks like Spring Boot and Django.",
+    {
+      category: "Web Foundations",
+      description: "Building clean, accessible, SEO-ready interfaces using HTML and CSS.",
       techs: [
-        { name: "Java", icon: <FaJava className="text-[#007396]" />, desc: "Enterprise-grade scalable language for heavy workloads." },
-        { name: "Spring Boot", icon: <SiSpringboot className="text-[#6DB33F]" />, desc: "Microservices & secure high-speed API development." },
-        { name: "Python", icon: <FaPython className="text-[#3776AB]" />, desc: "Advanced scripting for AI, ML & Automation." },
-        { name: "Django", icon: <SiDjango className="text-[#092E20]" />, desc: "High-level web framework for rapid development." },
-        { name: "Flask", icon: <SiFlask className="text-black" />, desc: "Efficient lightweight web application framework." },
-        { name: "PHP / Laravel", icon: <FaLaravel className="text-[#FF2D20]" />, desc: "Elegant and expressive PHP applications." },
-        { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" />, desc: "Fast event-driven network applications." }
-      ]
+        { name: "HTML", icon: <TechIcon>HTML</TechIcon>, desc: "Semantic markup for fast, structured pages." },
+        { name: "CSS", icon: <TechIcon>CSS</TechIcon>, desc: "Responsive styling with modern layout techniques." },
+        { name: "Tailwind CSS", icon: <TechIcon>TW</TechIcon>, desc: "Utility-first design for rapid, consistent UI." },
+      ],
     },
     {
-      category: "Frontend & Web Technologies",
-      description: "Creating SEO-optimized, fast, and responsive user interfaces with Next.js and React.",
+      category: "Frontend & UI",
+      description: "Component-driven UI with React for scalable user experiences.",
       techs: [
-        { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" />, desc: "Powering modern interactive web features." },
-        { name: "React JS", icon: <FaReact className="text-[#61DAFB]" />, desc: "Efficient component-based UI development." },
-        { name: "Next JS", icon: <SiNextdotjs className="text-black" />, desc: "Production-ready, SEO-friendly React apps." }
-      ]
+        { name: "React", icon: <TechIcon>React</TechIcon>, desc: "Reusable components and performant rendering." },
+        { name: "Next.js", icon: <TechIcon>Next</TechIcon>, desc: "SEO-friendly routing and production-ready React apps." },
+      ],
     },
     {
-      category: "Cloud Deployment & Hosting",
-      description: "Scalable cloud infrastructure on AWS and Digital Ocean for maximum uptime.",
+      category: "Backend & JavaScript Runtime",
+      description: "Reliable server-side logic and integrations using Node.js.",
       techs: [
-        { name: "AWS EC2", icon: <FaAws className="text-[#FF9900]" />, desc: "Secure virtual servers for hosting." },
-        { name: "AWS Beanstalk", icon: <FaAws className="text-[#FF9900]" />, desc: "Seamless app scaling and management." },
-        { name: "AWS RDS", icon: <FaDatabase className="text-[#333]" />, desc: "High-performance managed databases." },
-        { name: "Digital Ocean", icon: <FaDigitalOcean className="text-[#0080FF]" />, desc: "Reliable developer-friendly cloud hosting." }
-      ]
+        { name: "Node.js", icon: <TechIcon>Node</TechIcon>, desc: "Event-driven backend services and integrations." },
+      ],
     },
-    {
-      category: "Secure Databases",
-      description: "Managed data storage solutions with PostgreSQL, MySQL, and MongoDB.",
-      techs: [
-        { name: "PostgreSQL", icon: <SiPostgresql className="text-[#336791]" />, desc: "The world's most advanced open-source DB." },
-        { name: "MySQL", icon: <SiMysql className="text-[#4479A1]" />, desc: "Reliable relational database management." },
-        { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" />, desc: "Scalable NoSQL document database." }
-      ]
-    },
-    {
-      category: "Mobile & Desktop Solutions",
-      description: "Building cross-platform apps with Flutter, React Native, and Electron.",
-      techs: [
-        { name: "React Native", icon: <FaReact className="text-[#61DAFB]" />, desc: "Native mobile performance with React." },
-        { name: "Flutter", icon: <SiFlutter className="text-[#02569B]" />, desc: "High-quality beautiful mobile UIs." },
-        { name: "Electron JS", icon: <SiElectron className="text-[#47848F]" />, desc: "Powerful cross-platform desktop software." }
-      ]
-    }
   ];
 
   return (
@@ -91,11 +76,12 @@ export default function Technologies() {
           <div className="inline-block bg-white/80 border border-secondary text-primary px-6 py-2 rounded-full font-bold text-sm mb-6 shadow-sm">
             <FaShieldAlt className="inline mr-2 text-accent" /> SECURE TECHNOLOGY EXPERTS
           </div>
-          <h3 className="text-3xl md:text-5xl font-black text-primary mb-6">
+            <h3 className="text-3xl md:text-5xl font-semibold text-primary mb-6">
+
             Our Core <span className="text-accent">Technology Stack</span>
           </h3>
           <p className="text-lg text-muted max-w-3xl mx-auto font-medium leading-relaxed">
-            Softnexis Gentech builds secure, scalable applications using the latest programming languages and cloud infrastructures. We transform your business ideas into reality.
+            Codevix builds secure, scalable applications using the latest programming languages and cloud infrastructures. We transform your business ideas into reality.
           </p>
         </div>
       </section>
@@ -106,7 +92,8 @@ export default function Technologies() {
           {techStack.map((group, idx) => (
             <div key={idx} className="animate-on-scroll">
               <div className="mb-12 border-l-4 border-secondary pl-6">
-                <h2 className="text-3xl font-bold text-primary">{group.category}</h2>
+            <h2 className="text-3xl font-semibold text-primary">{group.category}</h2>
+
                 <p className="text-muted font-medium mt-2">{group.description}</p>
               </div>
 
@@ -132,7 +119,8 @@ export default function Technologies() {
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto bg-linear-to-r from-primary to-secondary rounded-[40px] p-12 text-center text-white shadow-2xl relative overflow-hidden">
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-black mb-6">Want to Build a Secure Application?</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-6">Want to Build a Secure Application?</h2>
+
             <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-medium">
               Consult with our technology experts today and choose the right stack for your business growth.
             </p>

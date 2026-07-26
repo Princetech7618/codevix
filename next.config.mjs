@@ -11,7 +11,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['softnexis.in'], // Add your domain if using Next/Image
+    domains: ['codevix.com'], // Add your domain if using Next/Image
   },
 }
 

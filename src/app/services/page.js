@@ -15,22 +15,29 @@ import {
 } from "react-icons/fa";
 
 export const metadata = {
-  title: "Professional IT Services | Custom SaaS, Java & Python Development",
+  title: "Codevix Services | Website Design & SEO",
   description:
-    "Softnexis Gentech offers expert Java Spring Boot, Python Django, and React.js development. We specialize in Multi-tenant SaaS, Hospital Management Systems, Travel CRM, and Enterprise software solutions.",
+    "Codevix delivers website design, SEO, e-commerce, and digital marketing services for businesses ready to grow online.",
   keywords: [
-    "Softnexis Gentech Services",
-    "Java Spring Boot development",
-    "Python Django web applications",
-    "Multi-tenant SaaS Travel CRM",
-    "Hospital Management Software India",
-    "School ERP Solutions",
-    "Enterprise Software Engineering",
-    "MERN Stack Development",
-    "Custom CRM Solutions",
-    "AWS Cloud Deployment Services",
-    "Scalable Business Automation",
-    "Fintech Payment Integration"
+    "Codevix Services",
+    "website design",
+    "SEO services",
+    "digital marketing",
+    "custom website development",
+    "e-commerce development",
+    "react web development",
+    "next js development",
+    "responsive websites",
+    "scalable web applications",
+    "SEO optimization",
+    "business website services",
+    "Codevix digital agency",
+    "online growth solutions",
+    "website maintenance services",
+    "digital product development",
+    "custom web apps",
+    "website UX design",
+    "digital strategy consulting"
   ].join(", "),
 };
 
@@ -111,43 +118,42 @@ export default function Services() {
           </div>
         </section>
 
-        {/* App Development Section */}
-        <section id="app-development" className="animate-on-scroll py-8">
+        {/* Marketing & Lead Growth Section (replacing App Development) */}
+        <section id="marketing-growth" className="animate-on-scroll py-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* Left Side: Professional App Mockup Image */}
-            <div className="order-2 lg:order-1 relative group overflow-hidden rounded-[32px] shadow-2xl border-2 hover:border-[#79d66b] border-white h-[350px]">
+            {/* Left Side: Marketing Visual */}
+            <div className="order-2 lg:order-1 relative group overflow-hidden rounded-[32px] shadow-2xl border-2 border-white h-[350px]">
               <div className="absolute inset-0 bg-secondary/5 group-hover:bg-transparent transition-colors z-10"></div>
               <img
-                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop"
-                alt="Mobile App Development Solutions"
+                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2070&auto=format&fit=crop"
+                alt="Digital Marketing and Growth Strategy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              {/* Floating Tech Badge */}
               <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-light-100">
                 <p className="text-[10px] font-black text-secondary uppercase tracking-widest">
-                  iOS & Android
+                  Growth Campaigns
                 </p>
               </div>
             </div>
 
             {/* Right Side: Content Box */}
-            <div className="order-1 lg:order-2 bg-white rounded-[32px] p-6 md:p-10 shadow-xl border-2 border-light-100 group hover:border-[#79d66b] transition-all">
+            <div className="order-1 lg:order-2 bg-white rounded-[32px] p-6 md:p-10 shadow-xl border-2 border-light-100 group hover:border-secondary transition-all">
               <h4 className="text-xl md:text-2xl font-bold text-primary mb-4 flex items-center tracking-tight">
-                <FaMobileAlt className="mr-3 text-[#79d66b]" size={20} /> App
-                Development
+                <FaChartLine className="mr-3 text-secondary" size={20} /> Marketing &
+                Growth
               </h4>
               <p className="text-muted text-sm md:text-base mb-6 leading-relaxed font-medium">
-                We develop native mobile applications for iOS and Android that
-                provide seamless performance and intuitive interfaces. Our apps
-                are built to deliver real business value.
+                We craft data-driven marketing strategies that turn traffic into
+                qualified leads—through SEO, content, and conversion-focused
+                campaign execution.
               </p>
 
               <ul className="grid grid-cols-1 gap-3 mb-6">
                 {[
-                  "Native iOS (Swift) & Android (Kotlin)",
-                  "Cross-platform (React Native, Flutter)",
-                  "Custom App UI/UX Design",
-                  "Ongoing App Maintenance & Updates",
+                  "SEO + content growth plans",
+                  "Landing pages & conversion CTAs",
+                  "Social media and email campaigns",
+                  "Performance tracking & reporting",
                 ].map((item, index) => (
                   <li
                     key={index}
@@ -163,12 +169,12 @@ export default function Services() {
               </ul>
 
               <p className="text-muted text-[11px] font-bold italic border-t border-light-100 pt-4">
-                * Innovative features and flawless performance for high user
-                engagement.
+                * Long-term visibility with measurable ROI.
               </p>
             </div>
           </div>
         </section>
+
         {/* Software Development Section */}
         <section id="software-development" className="animate-on-scroll py-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -231,54 +237,77 @@ export default function Services() {
           </div>
         </section>
 
-        {/* CRM Solutions Section */}
-        <section id="crm-solutions" className="animate-on-scroll">
+        <section id="digital-services" className="animate-on-scroll py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Left Side: Professional CRM Software Image */}
-            <div className="order-2 lg:order-1 flex justify-center">
-              <div className="relative group w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform transition-transform duration-500 hover:scale-[1.02]">
-                <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
-                  alt="Professional CRM Software Dashboard"
-                  className="w-full h-auto object-cover"
-                />
-                {/* HD Overlay */}
-                <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-300"></div>
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-light-100">
+              <div className="mb-6 flex items-center gap-3 text-primary">
+                <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center text-accent">
+                  <FaChartLine size={22} />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold">Digital Services for Growth</h2>
               </div>
-            </div>
 
-            {/* Right Side: Content Box */}
-            <div className="order-1 lg:order-2 bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-background-light">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 flex items-center">
-                <FaChartLine className="mr-3 text-primary-light" /> CRM
-                Solutions
-              </h2>
               <p className="text-text-secondary text-lg mb-4">
-                Ready-to-deploy CRM systems for various industries that help you
-                manage customer relationships effectively.
+                Transform your online presence with polished websites, dynamic
+                web apps, and SEO-driven digital marketing.
               </p>
-
-              <ul className="space-y-2 mb-4">
+              <ul className="space-y-3 text-text-muted">
                 {[
-                  "Hospital Management System",
-                  "School Management System",
-                  "Travel CRM",
-                  "Real Estate CRM",
-                  "Inventory Management System",
-                  "Task Manager",
+                  "Custom website design for modern brands",
+                  "SEO optimization for better search visibility",
+                  "Dynamic web applications with real-time features",
+                  "Performance tuning for fast page loads",
+                  "Ongoing website support and updates",
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start text-text-muted">
-                    <FaCheckCircle className="text-accent mr-2 mt-1 flex-shrink-0" />
+                  <li key={index} className="flex items-start gap-3">
+                    <FaCheckCircle className="mt-1 text-accent" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-
-              <p className="text-text-muted">
-                Our CRM solutions are customizable, scalable, and come with
-                comprehensive support and training.
-              </p>
             </div>
+
+            <div className="relative group overflow-hidden rounded-[32px] shadow-2xl border-2 border-light-100 h-[420px] bg-slate-100">
+              <div className="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors z-10"></div>
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2070&auto=format&fit=crop"
+                alt="Responsive Website Design"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-2xl shadow-lg border border-light-100">
+                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-primary">
+                  Website Design & SEO
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="industry-packages" className="animate-on-scroll py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Static Website",
+                desc: "Fast, secure brochure websites ideal for portfolios, agencies, and professional services.",
+              },
+              {
+                title: "Dynamic Website",
+                desc: "Interactive sites with CMS, user login, and custom business workflows.",
+              },
+              {
+                title: "SEO & Analytics",
+                desc: "Improve rankings and conversion with search-friendly content and analytics tracking.",
+              },
+              {
+                title: "E-commerce Website",
+                desc: "Sell online with modern storefronts, payment integration, and product management.",
+              },
+            ].map((item, index) => (
+              <div key={index} className="rounded-3xl bg-white p-6 border border-light-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                <h3 className="text-xl font-semibold text-primary mb-3">{item.title}</h3>
+                <p className="text-text-muted leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -288,24 +317,23 @@ export default function Services() {
             {/* Left Side: Content Box */}
             <div className="bg-white rounded-[32px] p-6 md:p-10 shadow-xl border border-light-100 group hover:border-secondary transition-all">
               <h4 className="text-xl md:text-2xl font-bold text-primary mb-4 flex items-center tracking-tight">
-                <FaCloud className="mr-3 text-secondary" size={24} /> Cloud &
+                <FaCloud className="mr-3 text-secondary" size={24} /> Vercel
                 Deployment
               </h4>
               <p className="text-muted text-sm md:text-base mb-6 leading-relaxed font-medium">
-                Scalable cloud infrastructure and professional deployment
-                services to ensure your applications are always live, secure,
-                and performing at their peak. We build resilient architectures
-                for global scalability.
+                Launch and scale your website or web app using Vercel—with
+                fast global delivery, secure previews, and performance-first
+                optimizations.
               </p>
 
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                 {[
-                  "AWS EC2 & Beanstalk",
-                  "DigitalOcean Hosting",
-                  "SSL & Domain Mapping",
-                  "Database Migration",
-                  "CI/CD Pipelines",
-                  "Cloud Security",
+                  "Vercel hosting & CDN",
+                  "Preview Deployments for every change",
+                  "Security headers & secure routing",
+                  "Performance tuning (core web vitals)",
+                  "Environment variables setup",
+                  "SEO-friendly deployment configuration",
                 ].map((item, index) => (
                   <li
                     key={index}
@@ -321,26 +349,24 @@ export default function Services() {
               </ul>
 
               <p className="text-muted text-[11px] font-bold italic border-t border-light-100 pt-4">
-                * We manage your infrastructure so you can focus on growing your
-                business.
+                * We deploy on Vercel so you can focus on marketing and growth.
               </p>
             </div>
 
-            {/* Right Side: Professional Cloud Infrastructure Image with Next.js Image Tag */}
+            {/* Right Side: Vercel Deployment Visual */}
             <div className="relative group overflow-hidden rounded-[32px] shadow-2xl border-4 border-white h-[400px] w-full bg-slate-100">
               <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors z-10"></div>
               <img
                 src="/cloudimg.jpg"
-                alt="Professional CRM Software Dashboard"
+                alt="Vercel deployment dashboard"
                 className="w-full h-auto object-cover"
               />
 
-              {/* Cloud Status Badge */}
               <div className="absolute bottom-4 left-4 z-20 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl shadow-lg border border-light-100">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
                   <p className="text-[10px] font-black text-primary uppercase tracking-widest">
-                    99.9% Uptime Guaranteed
+                    Global Delivery Enabled
                   </p>
                 </div>
               </div>
@@ -678,7 +704,7 @@ export default function Services() {
             <FaPhone className="mr-2" /> Call Now: +91 8810338523
           </a>
           <a
-            href="mailto:contact@softnexis.in"
+            href="mailto:contact@codevix.com"
             className="bg-white text-primary-light px-8 py-4 rounded-full font-semibold border-2 border-background-gradient hover:bg-background-light hover:border-primary-light hover:text-primary transition-all duration-300 flex items-center justify-center"
           >
             <FaEnvelope className="mr-2" /> Email Us

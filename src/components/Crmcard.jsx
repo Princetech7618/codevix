@@ -86,41 +86,41 @@ const SolutionCard = ({ item, index }) => {
 const EnterpriseSolutions = () => {
   const solutions = [
     {
-      title: "Hospital Management",
-      description: "Complete hospital operations - patient records, appointments, billing, inventory, and staff management.",
+      title: "Hospital Operations",
+      description: "Streamlined hospital workflows—patient records, appointments, billing, inventory, and staff management.",
       icon: <FaHospital className="w-6 h-6 sm:w-7 sm:h-7" />,
-      tag: null
+      tag: null,
     },
     {
       title: "School Management",
-      description: "Student admissions, attendance, grades, fee management, and parent-teacher communication portal.",
+      description: "Admissions, attendance, grades, fee management, and parent-teacher communication in one place.",
       icon: <FaSchool className="w-6 h-6 sm:w-7 sm:h-7" />,
-      tag: null
+      tag: null,
     },
     {
-      title: "Travel CRM Pro",
-      description: "Booking management, itinerary planning, customer management, and payment tracking for travel agencies.",
+      title: "Travel Booking Platform",
+      description: "Booking management, itinerary planning, customer communication, and payment tracking for travel agencies.",
       icon: <FaPlane className="w-6 h-6 sm:w-7 sm:h-7" />,
-      tag: "Free Landing Page"
+      tag: "Free Landing Page",
     },
     {
-      title: "Real Estate CRM",
-      description: "Property listings, lead management, client database, document management, and sales tracking.",
+      title: "Real Estate Platform",
+      description: "Listings, buyer inquiries, document management, and sales tracking designed for smooth customer journeys.",
       icon: <FaBuilding className="w-6 h-6 sm:w-7 sm:h-7" />,
-      tag: null
+      tag: null,
     },
     {
       title: "Smart Inventory",
-      description: "Stock tracking, order management, supplier management, and real-time inventory reports.",
+      description: "Stock tracking, order management, supplier workflows, and real-time inventory reporting.",
       icon: <FaBox className="w-6 h-6 sm:w-7 sm:h-7" />,
-      tag: null
+      tag: null,
     },
     {
-      title: "Task Manager",
-      description: "Project management, task assignment, team collaboration, and productivity tracking tools.",
+      title: "Task & Team Management",
+      description: "Project planning, task assignment, team collaboration, and productivity tracking tools.",
       icon: <FaTasks className="w-6 h-6 sm:w-7 sm:h-7" />,
-      tag: null
-    }
+      tag: null,
+    },
   ];
 
   return (

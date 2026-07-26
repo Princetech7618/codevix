@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Hero from "@/components/Hero";
-import Crmcard from "@/components/Crmcard";
 import {
   FaRocket,
   FaGlobe,
@@ -12,7 +11,7 @@ import {
   FaSearch,
   FaShoppingCart,
   FaFileAlt,
- 
+ FaGoogle ,
   FaCheckCircle,
   FaLightbulb,
   FaUserCheck,
@@ -29,17 +28,60 @@ import {
   FaChartBar,
    FaBullhorn,
      FaInfinity,
+       FaReact,
+ 
+ 
 } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiReact, SiNodedotjs } from 'react-icons/si';
-import SpecialOfferCard from "@/components/Specialcard";
+import { FaMeta } from "react-icons/fa6";
+import { TbRocket,TbGift,  } from "react-icons/tb";
+import { SiMongodb, SiExpress, SiReact, SiNodedotjs ,  SiNextdotjs, } from 'react-icons/si';
 
 export const metadata = {
-  title: "Softnexis Gentech | Smart IT Solutions",
+  title: "Codevix | Smart IT Solutions",
   description:
-    "Softnexis Gentech - Web Development, App Development, CRM Solutions, Digital Marketing, SEO, Hospital Management, School Management, and more IT services.",
+    "Codevix delivers SEO-friendly static and dynamic website development, web design, and digital growth solutions for businesses.",
   keywords:
-    "IT solutions, web development, app development, CRM, digital marketing, SEO, hospital management, school management",
+    "website development, static websites, dynamic websites, SEO services, web design, digital marketing, online visibility, business websites",
 };
+
+
+const services = [
+  {
+    icon: (
+      <>
+        <SiMongodb className="text-[#47A248]" />
+        <SiExpress className="text-black" />
+        <SiReact className="text-[#61DAFB]" />
+        <SiNodedotjs className="text-[#339933]" />
+      </>
+    ),
+    title: "MERN Stack Development",
+  },
+  {
+    icon: <SiNextdotjs />,
+    title: "Next.js Development",
+  },
+  {
+    icon: <FaReact className="text-sky-500" />,
+    title: "React.js Development",
+  },
+  {
+    icon: <SiNodedotjs className="text-green-600" />,
+    title: "Node.js Backend",
+  },
+  {
+    icon: <FaSearch className="text-blue-500" />,
+    title: "SEO Optimization",
+  },
+  {
+    icon: <FaGoogle className="text-orange-500" />,
+    title: "Google Ads",
+  },
+  {
+    icon: <FaMeta className="text-blue-600" />,
+    title: "Meta Ads",
+  },
+];
 
 export default function Home() {
   return (
@@ -53,7 +95,7 @@ export default function Home() {
 
           <div className="mb-8">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-              Softnexis <span className="text-accent">Gentech</span>
+              Codevix <span className="text-accent">Gentech</span>
             </div>
             <div className="text-xl md:text-2xl text-text-secondary font-medium">
               Smart IT Solutions
@@ -88,15 +130,15 @@ export default function Home() {
             Building Digital Excellence
           </h2>
           <p className="text-text-secondary text-lg leading-relaxed mb-4">
-            Softnexis Gentech is a leading IT solutions company providing
+            Codevix is a leading IT solutions company providing
             comprehensive software, web, mobile, and digital services to help
             businesses grow with cutting-edge technology.
           </p>
           <p className="text-text-secondary text-lg leading-relaxed mb-4">
             We deliver reliable, scalable, and innovative technology solutions
             for startups, SMEs, and enterprises across India and globally. From
-            custom software development to ready-made CRM solutions, we've got
-            everything your business needs to succeed in the digital age.
+            custom website development to SEO optimization, we help brands grow
+            and stand out online.
           </p>
           <p className="text-lg leading-relaxed">
             <strong className="text-primary-light">Our mission:</strong>{" "}
@@ -114,13 +156,17 @@ export default function Home() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 p-4">
   {[
     { icon: <FaGlobe />, title: "Web Development", desc: "Custom websites, e-commerce platforms, and web applications built with modern technologies for optimal performance." },
-    { icon: <FaMobileAlt />, title: "App Development", desc: "Native Android & iOS applications with seamless user experience and powerful functionality." },
     { icon: <FaLaptopCode />, title: "Software Development", desc: "Enterprise-grade custom software solutions tailored to your unique business requirements." },
-    { icon: <FaChartLine />, title: "CRM Solutions", desc: "Ready-to-deploy CRM systems for various industries - Hospital, School, Travel, Real Estate & more." },
+    { icon: <FaChartLine />, title: "Website Design", desc: "Beautiful, responsive websites built for brands, startups, and professionals." },
     { icon: <FaBullhorn />, title: "Digital Marketing", desc: "Complete digital marketing strategies including social media, content marketing, and online advertising." },
     { icon: <FaSearch />, title: "SEO Services", desc: "Search engine optimization to boost your online visibility and drive organic traffic to your business." },
     { icon: <FaShoppingCart />, title: "E-Commerce Solutions", desc: "Full-featured online stores with payment integration, inventory management, and analytics." },
-    { icon: <FaFileAlt />, title: "Static Websites", desc: "Fast, secure, and professional static websites perfect for portfolios, landing pages, and business sites." }
+    { icon: <FaFileAlt />, title: "Static Websites", desc: "Fast, secure, and professional static websites perfect for portfolios, landing pages, and business sites." },
+{
+  icon: <FaGoogle  />,
+  title: "Google & Meta Ads",
+  desc: "Targeted Google and Meta advertising campaigns designed to drive traffic, generate qualified leads, and accelerate business growth."
+},
   ].map((service, index) => (
     <div key={index} className="group relative bg-white rounded-3xl p-8 text-center border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-on-scroll overflow-hidden">
       
@@ -147,20 +193,39 @@ export default function Home() {
   ))}
 </div>
 
-        {/* CRM Section */}
-        <div className="bg-accent/10 rounded-2xl border-2 border-accent p-6 md:p-8 mb-12 animate-on-scroll">
+        <div className="bg-primary/5 rounded-2xl border border-primary/20 p-6 md:p-8 mb-12 animate-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-6 relative pb-4">
-            Ready-Made CRM & Management Systems
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-accent to-primary-light rounded-full"></span>
+            Website & SEO Packages
+            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
           </h2>
           <p className="text-text-secondary text-center text-lg mb-8 font-medium">
-            Pre-built, tested, and ready to deploy. Customize according to your
-            needs!
+            Launch your online presence with a website designed for engagement,
+            speed, and search engine visibility.
           </p>
 
-        <Crmcard /> 
-
-         <SpecialOfferCard />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-3xl p-6 shadow-md border border-slate-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-primary mb-3">Static Website</h3>
+              <p className="text-text-muted leading-relaxed">
+                Fast and secure brochure-style websites ideal for businesses,
+                professionals, and portfolios.
+              </p>
+            </div>
+            <div className="bg-white rounded-3xl p-6 shadow-md border border-slate-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-primary mb-3">Dynamic Website</h3>
+              <p className="text-text-muted leading-relaxed">
+                Custom web applications, CMS-powered sites, and interactive
+                online experiences built for growth.
+              </p>
+            </div>
+            <div className="bg-white rounded-3xl p-6 shadow-md border border-slate-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-primary mb-3">SEO Services</h3>
+              <p className="text-text-muted leading-relaxed">
+                Improve your search visibility with optimized content,
+                performance tuning, and local SEO strategy.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Real-time Chatting Application Section */}
@@ -176,9 +241,11 @@ export default function Home() {
                   className="w-full h-auto object-cover"
                 />
                 {/* Floating Badge */}
-                <div className="absolute top-4 right-4 bg-accent text-white px-4 py-2 rounded-xl font-bold shadow-lg animate-bounce">
-                  Free Installation ðŸš€
-                </div>
+              <div className="absolute top-4 right-4 bg-accent text-white px-4 py-2 rounded-xl font-bold shadow-lg animate-bounce">
+  <span className="flex items-center gap-2 whitespace-nowrap">
+    Free Installation <TbRocket />
+  </span>
+</div>
               </div>
 
               {/* Right Side: Content */}
@@ -234,7 +301,7 @@ export default function Home() {
                 <div className="pt-6 border-t border-light-100">
                   <div className="flex items-center space-x-4 mb-6">
                     <span className="text-2xl font-black text-primary">
-                      â‚¹25,000
+                      ₹ 25,000
                     </span>
                     <span className="bg-sky-100 text-sky-700 px-3 py-1 rounded-lg text-xs font-bold uppercase">
                       Limited Time Offer
@@ -266,10 +333,9 @@ export default function Home() {
         </section>
 
       {/* Cloud Deployment & Hosting Services Section */}
-<section className="py-16 bg-[#f8fbff] animate-on-scroll">
+      {/* <section className="py-16 bg-[#f8fbff] animate-on-scroll">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
-      {/* Title font size reduced for a cleaner look */}
       <h4 className="text-2xl md:text-3xl font-bold text-primary mb-3">
         Cloud <span className="text-accent">Deployment Services</span>
       </h4>
@@ -281,7 +347,6 @@ export default function Home() {
 
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       
-      {/* Infrastructure Card */}
       <div className="bg-white p-7 rounded-3xl shadow-md border-b-4 border-secondary hover:shadow-xl transition-all">
         <div className="w-12 h-12 bg-light rounded-xl flex items-center justify-center text-secondary mb-5 text-xl">
           <FaCloud />
@@ -295,7 +360,6 @@ export default function Home() {
         </ul>
       </div>
 
-      {/* Security & Mapping Card */}
       <div className="bg-white p-7 rounded-3xl shadow-md border-b-4 border-accent hover:shadow-xl transition-all">
         <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center text-accent mb-5 text-xl">
           <FaLock />
@@ -309,7 +373,6 @@ export default function Home() {
         </ul>
       </div>
 
-      {/* Pricing Card - Scaled down for professional look */}
       <div className="bg-linear-to-br from-primary to-secondary p-7 rounded-3xl shadow-lg text-white transform lg:scale-105">
         <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase mb-4 tracking-wider">
           Best Value Pricing
@@ -333,7 +396,7 @@ export default function Home() {
 
     </div>
   </div>
-</section>
+</section> */}
 
 {/* Static Website Package Section */}
 <section className="py-20 bg-white animate-on-scroll">
@@ -343,9 +406,11 @@ export default function Home() {
         
         {/* Left Side: Offer Image & Badge */}
         <div className="p-8 md:p-12 relative group">
-          <div className="absolute top-12 left-12 z-10 bg-accent text-white px-6 py-2 rounded-full font-black shadow-xl animate-pulse">
-            Super Saver Deal ðŸ·ï¸
-          </div>
+          <div className="absolute top-14 left-14 z-10 bg-accent text-white px-6 py-2 rounded-full font-black shadow-xl animate-pulse">
+  <span className="inline-flex items-center gap-2 whitespace-nowrap">
+    Super Saver Deal <TbRocket className="text-lg" />
+  </span>
+</div>
           <img 
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" 
             alt="Static Website Design" 
@@ -390,11 +455,14 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
             <div className="text-center sm:text-left">
               <p className="text-muted text-[10px] font-bold uppercase tracking-widest mb-1">Starting At Only</p>
-              <p className="text-3xl font-black text-primary tracking-tighter">â‚¹2,499</p>
+              <p className="text-2xl font-black text-primary tracking-tighter">₹2,499</p>
             </div>
             <div className="h-16 w-px bg-light-100 hidden sm:block"></div>
             <div className="bg-linear-to-r from-accent/20 to-transparent p-4 rounded-2xl border-l-4 border-accent">
-              <p className="text-primary font-bold text-sm">ðŸŽ Bonus Offer:</p>
+           <p className="text-primary font-bold text-sm inline-flex items-center gap-2 whitespace-nowrap">
+  <TbGift className="text-lg" />
+  Bonus Offer:
+</p>
               <p className="text-muted text-xs leading-tight font-medium">1-Month **FREE Hosting** on our premium server with your domain mapping.</p>
             </div>
           </div>
@@ -421,7 +489,7 @@ export default function Home() {
       
       {/* Left Content */}
       <div className="space-y-6">
-        <h4 className="text-2xl md:text-4xl font-black text-primary leading-tight">
+        <h4 className="text-2xl md:text-4xl font-semibold text-primary leading-tight">
           Our Clients,
           <span className="text-secondary">Our Priority</span>
         </h4>
@@ -489,7 +557,7 @@ export default function Home() {
         {/* Why Choose Section */}
         <div className="bg-background-light rounded-2xl p-6 md:p-8 mb-12 animate-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8 relative pb-4">
-            Why Choose Softnexis Gentech?
+            Why Choose Codevix?
             <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
           </h2>
 
@@ -565,74 +633,39 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="py-20 bg-[#f8fbff] overflow-hidden">
+    <section className="py-20 bg-[#f8fbff] overflow-hidden">
   <div className="max-w-7xl mx-auto px-6 text-center mb-12">
-    <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 tracking-tight">
+    <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
       Our <span className="text-secondary">Technical Services</span>
     </h2>
-    <p className="text-muted text-base max-w-2xl mx-auto font-medium leading-relaxed">
-      Explore our comprehensive range of cutting-edge technological solutions designed to drive innovation and efficiency.
+
+    <p className="text-muted text-base max-w-2xl mx-auto">
+      Explore our comprehensive range of cutting-edge technological solutions
+      designed to drive innovation and efficiency.
     </p>
   </div>
 
-  {/* Slider Mechanism */}
-  <div className="slider-container relative w-full overflow-hidden flex py-4">
-    <div className="slider-track flex space-x-10 animate-infinite-scroll">
-      {/* Duplicating the set for a seamless loop */}
-      {[...Array(3)].map((_, i) => (
-        <div key={i} className="flex space-x-10">
-          {/* MERN Card */}
-          <div className="flex-shrink-0 w-[300px] bg-white p-10 rounded-[32px] shadow-md border border-light-100 flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl">
-            <div className="flex space-x-2 mb-6 text-2xl">
-              <SiMongodb className="text-[#47A248]" />
-              <SiExpress className="text-black" />
-              <SiReact className="text-[#61DAFB]" />
-              <SiNodedotjs className="text-[#339933]" />
-            </div>
-            <h3 className="text-lg font-bold text-primary tracking-tight">MERN Stack Development</h3>
+  <div className="overflow-hidden">
+    <div className="flex w-max animate-scroll gap-8">
+
+      {[...services, ...services].map((service, index) => (
+        <div
+          key={index}
+          className="flex-shrink-0 w-[300px] bg-white p-10 rounded-[32px] shadow-md border border-light-100 flex flex-col items-center justify-center text-center hover:shadow-xl transition-all duration-300"
+        >
+          <div className="flex items-center justify-center gap-2 mb-6 text-4xl">
+            {service.icon}
           </div>
 
-          {/* Data Analytics Card */}
-          <div className="flex-shrink-0 w-[300px] bg-white p-10 rounded-[32px] shadow-md border border-light-100 flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl">
-            <div className="mb-6 text-4xl text-blue-500">
-              <FaChartBar />
-            </div>
-            <h3 className="text-lg font-bold text-primary tracking-tight">Data Analytics</h3>
-          </div>
-
-          {/* Digital Marketing Card */}
-          <div className="flex-shrink-0 w-[300px] bg-white p-10 rounded-[32px] shadow-md border border-light-100 flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl">
-            <div className="mb-6 text-4xl text-orange-500">
-              <FaBullhorn />
-            </div>
-            <h3 className="text-lg font-bold text-primary tracking-tight">Digital Marketing</h3>
-          </div>
-
-          {/* Cloud Computing Card */}
-          <div className="flex-shrink-0 w-[300px] bg-white p-10 rounded-[32px] shadow-md border border-light-100 flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl">
-            <div className="mb-6 text-4xl text-blue-400">
-              <FaCloud />
-            </div>
-            <h3 className="text-lg font-bold text-primary tracking-tight">Cloud Computing</h3>
-          </div>
-
-          {/* DevOps Card */}
-          <div className="flex-shrink-0 w-[300px] bg-white p-10 rounded-[32px] shadow-md border border-light-100 flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl">
-            <div className="mb-6 text-4xl text-sky-500">
-              <FaInfinity />
-            </div>
-            <h3 className="text-lg font-bold text-primary tracking-tight">DevOps Architecture</h3>
-          </div>
+          <h3 className="text-lg font-bold text-primary">
+            {service.title}
+          </h3>
         </div>
       ))}
-    </div>
 
-    {/* Side Fading Effects */}
-    <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#f8fbff] to-transparent z-10 pointer-events-none"></div>
-    <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[#f8fbff] to-transparent z-10 pointer-events-none"></div>
+    </div>
   </div>
 </section>
-
         {/* Contact CTA */}
         <div className="bg-gradient-to-br from-background-light via-background-gradient to-accent rounded-2xl p-8 text-center animate-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 relative pb-4">
@@ -651,7 +684,7 @@ export default function Home() {
               <FaPhone className="mr-2" /> Call Now: +91 8810338523
             </a>
             <a
-              href="mailto:contact@softnexis.in"
+              href="mailto:contact@codevix.com"
               className="bg-white text-primary-light px-8 py-4 rounded-full font-semibold border-2 border-background-gradient hover:bg-background-light hover:border-primary-light hover:text-primary transition-all duration-300 flex items-center justify-center"
             >
               <FaEnvelope className="mr-2" /> Email Us

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://softnexis.in',
+  siteUrl: 'https://codevix.com',
   generateRobotsTxt: true,
   generateIndexSitemap: false, // YE LINE ADD KAREIN (Zaroori hai)
   sitemapSize: 5000,

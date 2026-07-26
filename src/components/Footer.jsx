@@ -318,7 +318,7 @@
 //       <hr class="my-6 border-gray-600" />
 
 //       <div class="max-w-screen-xl mx-auto text-center">
-//         <p class="text-gray-400 text-[13px]">© 2026 Softnexis Gentech.</p>
+//         <p class="text-gray-400 text-[13px]">© 2026 Codevix.</p>
 //       </div>
 //     </footer>
 //   );
@@ -422,8 +422,8 @@ export default function Footer() {
               <div className="w-8 h-8 flex items-center justify-center bg-[#38BDF8]/10 text-[#38BDF8] rounded-lg mr-3">
                 <FaEnvelope size={14} />
               </div>
-              <a href="mailto:contact@softnexis.in" className="text-[13px] text-gray-500 font-bold hover:text-[#38BDF8]">
-                contact@softnexis.in
+              <a href="mailto:contact@codevix.com" className="text-[13px] text-gray-500 font-bold hover:text-[#38BDF8]">
+                contact@codevix.com
               </a>
             </div>
             <div className="flex items-start group">
@@ -444,7 +444,7 @@ export default function Footer() {
           </h6>
           <ul className="flex space-x-4">
             <li>
-              <Link href="https://www.facebook.com/softnexisgentech" target="_blank" className="text-blue-600 hover:scale-110 transition-transform block">
+              <Link href="https://www.facebook.com/codevix" target="_blank" className="text-blue-600 hover:scale-110 transition-transform block">
                 <FaFacebookF size={24} />
               </Link>
             </li>
@@ -477,7 +477,7 @@ export default function Footer() {
 
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-gray-400 font-bold text-[13px]">
-          © {new Date().getFullYear()} Softnexis Gentech.
+          © {new Date().getFullYear()} Codevix.
         </p>
         <div className="flex items-center space-x-4">
            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#38BDF8]">Innovate</span>

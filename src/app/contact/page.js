@@ -3,16 +3,16 @@ import { FaEnvelope, FaPhone, FaGlobe, FaMapMarkerAlt, FaInstagram, FaLinkedin, 
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'Contact Softnexis Gentech | Hire Expert Java & Python Developers',
-  description: 'Get a free consultation for your next IT project. Contact Softnexis Gentech for custom SaaS, CRM, and Enterprise software development using Java, Spring Boot, and React.js.',
+  title: 'Contact Codevix | Hire Expert Java & Python Developers',
+  description: 'Get a free consultation for your next IT project. Contact Codevix for custom SaaS, CRM, and Enterprise software development using Java, Spring Boot, and React.js.',
   keywords: [
-    'Contact Softnexis Gentech',
+    'Contact Codevix',
     'Hire Java Spring Boot Developers',
     'Python Django Consulting India',
     'Software Development Inquiry',
     'Custom SaaS Project Consultation',
     'IT Solutions Support Noida',
-    'Request a Demo Softnexis',
+    'Request a Demo Codevix',
     'Enterprise Software Development Quote',
     'Hire MERN Stack Development Team'
   ].join(', '),
@@ -56,8 +56,8 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">Email</h3>
-                <a href="mailto:contact@softnexis.in" className="text-text-muted hover:text-primary-light transition-colors duration-300">
-                  contact@softnexis.in
+                <a href="mailto:contact@codevix.com" className="text-text-muted hover:text-primary-light transition-colors duration-300">
+                  contact@codevix.com
                 </a>
               </div>
             </div>
@@ -68,8 +68,8 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">Website</h3>
-                <a href="https://softnexis.in" className="text-text-muted hover:text-primary-light transition-colors duration-300">
-                  softnexis.in
+                <a href="https://codevix.com" className="text-text-muted hover:text-primary-light transition-colors duration-300">
+                  codevix.com
                 </a>
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function Contact() {
 
           <div className="flex space-x-4 mt-8">
             <a 
-              href="https://instagram.com/softnexis" 
+              href="https://www.instagram.com/codevix" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-11 h-11 rounded-full bg-background-light text-accent  border-3 border-accent border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
@@ -96,7 +96,7 @@ export default function Contact() {
               <FaInstagram size={18} />
             </a>
             <a 
-              href="https://linkedin.com/company/softnexis-gentech" 
+              href="https://www.linkedin.com/company/codevix" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-11 h-11 rounded-full bg-background-light text-accent border-3 border-accent border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
@@ -105,7 +105,7 @@ export default function Contact() {
               <FaLinkedin size={18} />
             </a>
             <a 
-              href="https://facebook.com/softnexis" 
+              href="https://www.facebook.com/codevix" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-11 h-11 rounded-full bg-background-light text-accent border-3 border-accent border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
@@ -114,7 +114,7 @@ export default function Contact() {
               <FaFacebook size={18} />
             </a>
             <a 
-              href="https://twitter.com/softnexis" 
+              href="https://twitter.com/codevix" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-11 h-11 rounded-full bg-background-light border-3 border-accent text-accent border-background-gradient flex items-center justify-center text-primary-light hover:bg-gradient-to-r hover:from-primary-light hover:to-accent hover:text-white hover:border-accent transition-all duration-300"
@@ -191,7 +191,7 @@ export default function Contact() {
             <FaPhone className="mr-2" /> Call Now: +91 8810338523
           </a>
           <a 
-            href="mailto:contact@softnexis.in" 
+            href="mailto:contact@codevix.com" 
             className="bg-white text-primary-light px-8 py-4 rounded-full font-semibold border-2 border-background-gradient hover:bg-background-light hover:border-primary-light hover:text-primary transition-all duration-300 flex items-center justify-center"
           >
             <FaEnvelope className="mr-2" /> Email Us

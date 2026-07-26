@@ -27,8 +27,8 @@
 // } from 'react-icons/fa';
 
 // export const metadata = {
-//   title: 'Softnexis Gentech | Smart IT Solutions',
-//   description: 'Softnexis Gentech - Web Development, App Development, CRM Solutions, Digital Marketing, SEO, Hospital Management, School Management, and more IT services.',
+//   title: 'Codevix | Smart IT Solutions',
+//   description: 'Codevix - Web Development, App Development, CRM Solutions, Digital Marketing, SEO, Hospital Management, School Management, and more IT services.',
 //   keywords: 'IT solutions, web development, app development, CRM, digital marketing, SEO, hospital management, school management',
 // };
 
@@ -44,7 +44,7 @@
           
 //           <div className="mb-8">
 //             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-//               Softnexis <span className="text-accent">Gentech</span>
+//               Codevix <span className="text-accent">Gentech</span>
 //             </div>
 //             <div className="text-xl md:text-2xl text-text-secondary font-medium">
 //               Smart IT Solutions
@@ -77,7 +77,7 @@
 //         <div className="bg-white rounded-2xl shadow-lg border-2 border-background-light p-6 md:p-8 mb-12 animate-on-scroll">
 //           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Building Digital Excellence</h2>
 //           <p className="text-text-secondary text-lg leading-relaxed mb-4">
-//             Softnexis Gentech is a leading IT solutions company providing comprehensive software, web, mobile, and digital services to help businesses grow with cutting-edge technology.
+//             Codevix is a leading IT solutions company providing comprehensive software, web, mobile, and digital services to help businesses grow with cutting-edge technology.
 //           </p>
 //           <p className="text-text-secondary text-lg leading-relaxed mb-4">
 //             We deliver reliable, scalable, and innovative technology solutions for startups, SMEs, and enterprises across India and globally. From custom software development to ready-made CRM solutions, we've got everything your business needs to succeed in the digital age.
@@ -228,7 +228,7 @@
 //         {/* Why Choose Section */}
 //         <div className="bg-background-light rounded-2xl p-6 md:p-8 mb-12 animate-on-scroll">
 //           <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8 relative pb-4">
-//             Why Choose Softnexis Gentech?
+//             Why Choose Codevix?
 //             <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
 //           </h2>
           
@@ -299,7 +299,7 @@
 //               <FaPhone className="mr-2" /> Call Now: +91 8810338523
 //             </a>
 //             <a 
-//               href="mailto:contact@softnexis.in" 
+//               href="mailto:contact@codevix.com" 
 //               className="bg-white text-primary-light px-8 py-4 rounded-full font-semibold border-2 border-background-gradient hover:bg-background-light hover:border-primary-light hover:text-primary transition-all duration-300 flex items-center justify-center"
 //             >
 //               <FaEnvelope className="mr-2" /> Email Us
@@ -342,8 +342,8 @@ import {
 } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Softnexis Gentech | Smart IT Solutions',
-  description: 'Softnexis Gentech - Web Development, App Development, CRM Solutions, Digital Marketing, SEO, Hospital Management, School Management, and more IT services.',
+  title: 'Codevix | Smart IT Solutions',
+  description: 'Codevix - Web Development, App Development, CRM Solutions, Digital Marketing, SEO, Hospital Management, School Management, and more IT services.',
   keywords: 'IT solutions, web development, app development, CRM, digital marketing, SEO, hospital management, school management',
 };
 
@@ -359,7 +359,7 @@ export default function Home() {
           
           <div className="mb-8">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-              Softnexis <span className="text-accent">Gentech</span>
+              Codevix <span className="text-accent">Gentech</span>
             </div>
             <div className="text-xl md:text-2xl text-text-secondary font-medium">
               Smart IT Solutions
@@ -392,7 +392,7 @@ export default function Home() {
         <div className="bg-white rounded-2xl shadow-lg border-2 border-background-light p-6 md:p-8 mb-12 animate-on-scroll">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Building Digital Excellence</h2>
           <p className="text-text-secondary text-lg leading-relaxed mb-4">
-            Softnexis Gentech is a leading IT solutions company providing comprehensive software, web, mobile, and digital services to help businesses grow with cutting-edge technology.
+            Codevix is a leading IT solutions company providing comprehensive software, web, mobile, and digital services to help businesses grow with cutting-edge technology.
           </p>
           <p className="text-text-secondary text-lg leading-relaxed mb-4">
             We deliver reliable, scalable, and innovative technology solutions for startups, SMEs, and enterprises across India and globally. From custom software development to ready-made CRM solutions, we've got everything your business needs to succeed in the digital age.
@@ -619,7 +619,7 @@ export default function Home() {
         {/* Why Choose Section */}
         <div className="bg-background-light rounded-2xl p-6 md:p-8 mb-12 animate-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8 relative pb-4">
-            Why Choose Softnexis Gentech?
+            Why Choose Codevix?
             <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
           </h2>
           
@@ -690,7 +690,7 @@ export default function Home() {
               <FaPhone className="mr-2" /> Call Now: +91 8810338523
             </a>
             <a 
-              href="mailto:contact@softnexis.in" 
+              href="mailto:contact@codevix.com" 
               className="bg-white text-primary-light px-8 py-4 rounded-full font-semibold border-2 border-background-gradient hover:bg-background-light hover:border-primary-light hover:text-primary transition-all duration-300 flex items-center justify-center"
             >
               <FaEnvelope className="mr-2" /> Email Us

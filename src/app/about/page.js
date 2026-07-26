@@ -15,10 +15,10 @@ import {
 } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'About Softnexis Gentech | Experts in SaaS & Enterprise Software',
-  description: 'Softnexis Gentech is a leading technology partner specializing in Java Spring Boot, Python, and React.js. We deliver scalable SaaS, Fintech, and Healthcare solutions with high-performance cloud architectures.',
+  title: 'About Codevix | Experts in SaaS & Enterprise Software',
+  description: 'Codevix is a leading technology partner specializing in Java Spring Boot, Python, and React.js. We deliver scalable SaaS, Fintech, and Healthcare solutions with high-performance cloud architectures.',
   keywords: [
-    'Softnexis Gentech Company Profile',
+    'Codevix Company Profile',
     'Enterprise Software Experts India',
     'Custom SaaS Development Team',
     'Java Backend Development Agency',
@@ -61,7 +61,7 @@ export default function About() {
           {/* Reduced font size for body text */}
           <div className="space-y-4 text-sm md:text-base">
             <p className="text-muted leading-relaxed font-medium">
-              Softnexis Gentech was founded with a simple mission: to empower businesses with innovative technology solutions that drive real results. From a small startup, we have evolved into a trusted IT partner for global enterprises.
+              Codevix was founded with a simple mission: to empower businesses with innovative technology solutions that drive real results. From a small startup, we have evolved into a trusted IT partner for global enterprises.
             </p>
             
             <p className="text-muted leading-relaxed font-medium">
@@ -87,7 +87,7 @@ export default function About() {
         <div className="relative rounded-[32px] overflow-hidden shadow-xl border-3 border-accent transform transition-transform duration-500 hover:scale-[1.01]">
           <img 
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
-            alt="Softnexis Team Collaboration" 
+            alt="Codevix Team Collaboration" 
             className="w-full h-[400px] object-cover"
           />
           <div className="absolute inset-0 bg-linear-to-t from-primary/40 to-transparent flex flex-col justify-end p-8">
@@ -187,7 +187,7 @@ export default function About() {
       {/* Why Choose Us */}
       <section className="animate-on-scroll mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8 relative pb-4">
-          Why Choose Softnexis Gentech?
+          Why Choose Codevix?
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-light to-accent rounded-full"></span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -252,7 +252,7 @@ export default function About() {
             <FaPhone className="mr-2" /> Get in Touch
           </a>
           <a 
-            href="mailto:contact@softnexis.in" 
+            href="mailto:contact@codevix.com" 
             className="bg-white text-primary-light px-8 py-4 rounded-full font-semibold border-2 border-background-gradient hover:bg-background-light hover:border-primary-light hover:text-primary transition-all duration-300 flex items-center justify-center"
           >
             <FaEnvelope className="mr-2" /> Request a Consultation

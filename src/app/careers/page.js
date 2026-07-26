@@ -3,17 +3,17 @@ import { FaBriefcase, FaRocket, FaUsers, FaChartLine, FaEnvelope, FaPhone ,FaUse
 import CareerForm from '@/components/CareerForm';
 
 export const metadata = {
-  title: 'Careers at Softnexis Gentech | Join Our Tech Team',
-  description: 'Build your career with Softnexis Gentech. We are hiring MERN Stack Interns, Java Developers, and Python Enthusiasts to work on scalable SaaS and Fintech projects.',
+  title: 'Careers at Codevix | Join Our Tech Team',
+  description: 'Build your career with Codevix. We are hiring MERN Stack Interns, Java Developers, and Python Enthusiasts to work on scalable SaaS and Fintech projects.',
   keywords: [
-    'Careers at Softnexis Gentech',
+    'Careers at Codevix',
     'MERN Stack Internship 2026',
     'Java Spring Boot Jobs India',
     'Python Django Developer Openings',
     'Software Engineering Internships',
     'Full Stack Developer Careers',
     'IT Jobs for Freshers',
-    'Work at Softnexis Gentech',
+    'Work at Codevix',
     'Web Development Internships Noida'
   ].join(', '),
 };
@@ -23,7 +23,7 @@ export default function Careers() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-background-light via-background-gradient to-accent rounded-2xl p-8 md:p-12 text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">Careers at Softnexis Gentech</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">Careers at Codevix</h1>
         <p className="text-xl text-text-secondary max-w-3xl mx-auto">
           Join our team of innovators and help shape the future of technology
         </p>
@@ -177,7 +177,7 @@ export default function Careers() {
             <FaPhone className="mr-2" /> Call HR: +91 8810338523
           </a>
           <a 
-            href="mailto:careers@softnexis.in" 
+            href="mailto:careers@codevix.com" 
             className="bg-white text-primary-light px-8 py-4 rounded-full font-semibold border-2 border-background-gradient hover:bg-background-light hover:border-primary-light hover:text-primary transition-all duration-300 flex items-center justify-center"
           >
             <FaEnvelope className="mr-2" /> Email Careers
