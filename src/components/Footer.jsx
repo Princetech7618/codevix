@@ -331,19 +331,56 @@ import Link from 'next/link';
 import { 
   FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, 
   FaChevronRight, FaInstagram, FaLinkedinIn, 
-  FaFacebookF, FaGlobe, FaMobileAlt, 
-  FaCode, FaChartBar, FaCloud, 
-  FaCompactDisc
+  FaFacebookF, FaGlobe, FaPaintBrush, 
+  FaCode, FaBullhorn, FaSearch, 
+  FaShoppingCart,  FaLaptopCode,
 } from 'react-icons/fa';
 
 export default function Footer() {
   const services = [
-    { name: 'Web Development', href: '/services', icon: <FaGlobe /> },
-    { name: 'App Development', href: '/services#app', icon: <FaMobileAlt /> },
-    { name: 'Software Solutions', href: '/services#software', icon: <FaCode /> },
-    { name: 'Digital Marketing', href: '/services#marketing', icon: <FaChartBar /> },
-    { name: 'Cloud Computing', href: '/services#cloud', icon: <FaCloud /> },
-    { name: "Graphics Designing", href: '/services#designing', icon: <FaCompactDisc /> },
+  {
+    name: 'Web Development',
+    href: '/services/web-development',
+    icon: <FaGlobe />,
+  },
+  {
+    name: 'Software Development',
+    href: '/services/software-development',
+    icon: <FaCode />,
+  },
+  {
+    name: 'UI/UX Design',
+    href: '/services/ui-ux-design',
+    icon: <FaPaintBrush />,
+  },
+  {
+    name: 'Digital Marketing',
+    href: '/services/digital-marketing',
+    icon: <FaBullhorn />,
+  },
+  {
+    name: 'SEO Services',
+    href: '/services/seo-services',
+    icon: <FaSearch />,
+  },
+  {
+    name: 'E-Commerce Solutions',
+    href: '/services/e-commerce-solutions',
+    icon: <FaShoppingCart />,
+
+  },
+  {
+    name: 'Static Websites',
+    href: '/services/static-websites',
+    icon: <FaLaptopCode />,
+    
+  },
+  {
+    name: 'Google & Meta Ads',
+    href: '/services/google-meta-ads',
+    icon: <FaBullhorn />,
+    
+  },
   
     
   ];
@@ -351,11 +388,11 @@ export default function Footer() {
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
-    { name: 'Products', href: '/products' },
+    // { name: 'Products', href: '/products' },
     {name: 'Services', href: '/services' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact Us', href: '/contact' },
-    { name: 'Technology', href: '/technologies'}
+    // { name: 'Technology', href: '/technologies'}
   ];
 
   return (
@@ -405,37 +442,78 @@ export default function Footer() {
         </div>
 
         {/* Section 3: Let's Connect (Contact Info) */}
-        <div className="space-y-6">
-          <h6 className="text-sm text-black font-bold uppercase tracking-wider border-b-2 border-[#38BDF8]/20 pb-2 w-fit">
-            Let's Connect
-          </h6>
-          <div className="space-y-4">
-            <div className="flex items-center group">
-              <div className="w-8 h-8 flex items-center justify-center bg-[#38BDF8]/10 text-[#38BDF8] rounded-lg mr-3">
-                <FaPhoneAlt size={14} />
-              </div>
-              <a href="tel:+918810338523" className="text-[13px] text-gray-500 font-bold hover:text-[#38BDF8]">
-                +91 8810338523
-              </a>
-            </div>
-            <div className="flex items-center group">
-              <div className="w-8 h-8 flex items-center justify-center bg-[#38BDF8]/10 text-[#38BDF8] rounded-lg mr-3">
-                <FaEnvelope size={14} />
-              </div>
-              <a href="mailto:contact@codevix.com" className="text-[13px] text-gray-500 font-bold hover:text-[#38BDF8]">
-                contact@codevix.com
-              </a>
-            </div>
-            <div className="flex items-start group">
-              <div className="w-8 h-8 flex items-center justify-center bg-accent/10 text-accent rounded-lg mr-3 shrink-0">
-                <FaMapMarkerAlt size={14} />
-              </div>
-              <p className="text-[13px] text-gray-500 font-medium leading-relaxed">
-                Noida Sector 63, D-Block, Plot No. 242, <br />Greater Delhi Area
-              </p>
-            </div>
-          </div>
-        </div>
+       <div className="space-y-6">
+  <h6 className="w-fit border-b-2 border-[#38BDF8]/20 pb-2 text-sm font-bold uppercase tracking-wider text-black">
+    Let's Connect
+  </h6>
+
+  <div className="space-y-4">
+
+    {/* Phone Numbers */}
+    <div className="flex flex-col space-y-3">
+
+  {/* First Number */}
+
+
+
+   <a
+    href="tel:+918449188509"
+    className="flex items-center group"
+  >
+    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#38BDF8]/10 text-[#38BDF8] transition-colors group-hover:bg-[#38BDF8] group-hover:text-white">
+      <FaPhoneAlt size={14} />
+    </div>
+
+    <span className="ml-3 text-[13px] font-bold text-gray-500 transition-colors group-hover:text-[#38BDF8]">
+      +91 8449188509
+    </span>
+  </a>
+
+  {/* Second Number */}
+  <a
+    href="tel:+917618103463"
+    className="flex items-center group"
+  >
+    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#38BDF8]/10 text-[#38BDF8] transition-colors group-hover:bg-[#38BDF8] group-hover:text-white">
+      <FaPhoneAlt size={14} />
+    </div>
+
+    <span className="ml-3 text-[13px] font-bold text-gray-500 transition-colors group-hover:text-[#38BDF8]">
+      +91 7618103463
+    </span>
+  </a>
+
+</div>
+
+    {/* Email */}
+    <div className="flex items-center group">
+      <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#38BDF8]/10 text-[#38BDF8]">
+        <FaEnvelope size={14} />
+      </div>
+
+      <a
+        href="mailto:contact@codevix.com"
+        className="ml-3 text-[13px] font-bold text-gray-500 transition-colors hover:text-[#38BDF8]"
+      >
+        contact@codesvix.com
+      </a>
+    </div>
+
+    {/* Address */}
+    <div className="flex items-start group">
+      <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+        <FaMapMarkerAlt size={14} />
+      </div>
+
+      <p className="ml-3 text-[13px] font-medium leading-relaxed text-gray-500">
+        Noida Uttar Pradesh, India 
+        <br />
+        Greater Delhi Area
+      </p>
+    </div>
+
+  </div>
+</div>
 
         {/* Section 4: Social & Newsletter */}
         <div className="space-y-6">
@@ -444,17 +522,17 @@ export default function Footer() {
           </h6>
           <ul className="flex space-x-4">
             <li>
-              <Link href="https://www.facebook.com/codevix" target="_blank" className="text-blue-600 hover:scale-110 transition-transform block">
+              <Link href="https://www.facebook.com/" target="_blank" className="text-blue-600 hover:scale-110 transition-transform block">
                 <FaFacebookF size={24} />
               </Link>
             </li>
             <li>
-              <Link href="https://www.linkedin.com/company/softnexis-gentech" target="_blank" className="text-[#007ab9] hover:scale-110 transition-transform block">
+              <Link href="https://www.linkedin.com/" target="_blank" className="text-[#007ab9] hover:scale-110 transition-transform block">
                 <FaLinkedinIn size={24} />
               </Link>
             </li>
             <li>
-              <Link href="https://www.instagram.com/softnexis/" target="_blank" className="hover:scale-110 transition-transform block">
+              <Link href="https://www.instagram.com/" target="_blank" className="hover:scale-110 transition-transform block">
                 <FaInstagram size={24} className="text-pink-600" />
               </Link>
             </li>
